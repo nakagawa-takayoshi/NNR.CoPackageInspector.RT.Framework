@@ -1,0 +1,1 @@
+# NNR.CoPackageInspector.RT.Framework
