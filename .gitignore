@@ -1,0 +1,13 @@
+﻿################################################################################
+# この .gitignore ファイルは Microsoft(R) Visual Studio によって自動的に作成されました。
+################################################################################
+
+/.vs/NNR.CoPackageInspector.RT.Framework
+/NNR.CoPackageInspector.RT.Framework/obj/Debug
+/NNR.CopackageInspector.RT.Framework.Controller/bin/Debug
+/NNR.CopackageInspector.RT.Framework.Controller/obj/Debug
+/NNR.CoPackageInspector.RT.Framework.Model/bin/Debug
+/NNR.CoPackageInspector.RT.Framework.Model/obj/Debug
+/NNR.CoPackegeInspextor/bin/Debug
+/NNR.CoPackegeInspextor/obj/Debug
+/NNR.CoPakageInspector.RT.MainApp.Model/obj/Debug
