@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0DB18B88-59CB-43AA-AC96-86C33EA2BFBB}</ProjectGuid>
+    <ProjectGuid>{18ED2796-92E0-487C-BB20-7B69E130707F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NNR.CoPakageInspector.RT.MainApp.Model</RootNamespace>
-    <AssemblyName>NNR.CoPakageInspector.RT.MainApp.Model</AssemblyName>
+    <RootNamespace>NNR.CoPackageInspector.RT.MainApp.Interface</RootNamespace>
+    <AssemblyName>NNR.CoPackageInspector.RT.MainApp.Interface</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,15 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainAppContext.cs" />
-    <Compile Include="MainAppModel.cs" />
+    <Compile Include="IMainAppContext.cs" />
+    <Compile Include="MainAppContextFactory.cs" />
+    <Compile Include="MainAppContextProvider.cs" />
+    <Compile Include="Model\IMainAppModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NNR.CoPackageInspector.RT.MainApp.Interface\NNR.CoPackageInspector.RT.MainApp.Interface.csproj">
-      <Project>{18ed2796-92e0-487c-bb20-7b69e130707f}</Project>
-      <Name>NNR.CoPackageInspector.RT.MainApp.Interface</Name>
-    </ProjectReference>
+    <Compile Include="View\IMainAppForm.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
