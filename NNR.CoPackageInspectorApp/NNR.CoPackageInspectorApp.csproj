@@ -81,6 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NNR.CoPackageInspector.MainApp.Runner\NNR.CoPackageInspector.MainApp.Runner.csproj">
+      <Project>{ca476372-c4dc-4e99-b277-493c092cabdb}</Project>
+      <Name>NNR.CoPackageInspector.MainApp.Runner</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NNR.CoPackageInspector.RT.MainApp.Interface\NNR.CoPackageInspector.RT.MainApp.Interface.csproj">
       <Project>{18ed2796-92e0-487c-bb20-7b69e130707f}</Project>
       <Name>NNR.CoPackageInspector.RT.MainApp.Interface</Name>

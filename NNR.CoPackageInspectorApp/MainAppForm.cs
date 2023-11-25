@@ -29,9 +29,7 @@ namespace NNR.CoPackageInspectorApp
         {
             base.OnLoad(e);
 
-            var mainAppContext = new MainAppContext(this);
-
-            MainAppContextFactory.Create(mainAppContext);
+            var mainAppContext = MainAppContextProvider.GetInstance();
 
             FormBorderStyle = FormBorderStyle.None;
             Size = new Size(1280, 760);

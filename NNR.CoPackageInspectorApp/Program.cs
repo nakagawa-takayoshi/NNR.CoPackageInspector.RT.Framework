@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NNR.CoPackageInspector.MainApp.Runner;
+using NNR.CoPackageInspector.RT.MainApp.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,11 @@ namespace NNR.CoPackageInspectorApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainAppForm());
+
+            var mainAppContext =  new MainAppContext(new MainAppForm());
+            var mainAppRunner = MainAppRunner.Create(mainAppContext);
+
+            mainAppRunner.Run();
         }
     }
 }
