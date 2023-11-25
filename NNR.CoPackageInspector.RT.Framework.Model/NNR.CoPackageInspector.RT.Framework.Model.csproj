@@ -78,5 +78,11 @@
   <ItemGroup>
     <Folder Include="Workpiece\Enums\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NNR.Liblary.Utility\NNR.Liblary.Utility.csproj">
+      <Project>{e9a1ea66-8c5e-489e-b8ac-a702080f688b}</Project>
+      <Name>NNR.Liblary.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

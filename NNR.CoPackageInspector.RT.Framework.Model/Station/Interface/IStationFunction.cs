@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
 using NR.Inspector.RT.Framework.Model;
 
 namespace NNR.CoPackageInspector.RT.Framework.Model.Station.Interface

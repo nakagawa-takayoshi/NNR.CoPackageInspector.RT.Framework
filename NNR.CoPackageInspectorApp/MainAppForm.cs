@@ -14,11 +14,17 @@ namespace NNR.CoPackageInspectorApp
 {
     public partial class MainAppForm : Form, IMainAppForm
     {
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         public MainAppForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// フォームロードのイベントハンドラ
+        /// </summary>
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -33,6 +39,9 @@ namespace NNR.CoPackageInspectorApp
             _mainSplitContainer.IsSplitterFixed = true;
         }
 
+        /// <summary>
+        /// フォームクローズのイベントハンドラ
+        /// </summary>
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);

@@ -1,5 +1,8 @@
 ﻿using NNR.CopackageInspector.RT.Framework.Model.Workpiece.Interface;
+using NNR.CoPackageInspector.RT.Framework.Controller.Station;
+using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
+using NNR.Liblary.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +19,6 @@ namespace NNR.CoPackageInspector.RT.Framework.Model.Station
         protected int _id;
         protected StationFunctionQueue _stationFunctionQueue;
         protected IAny<IWorkpieceModel> _workpiece;
-        protected IFrontControllerModel _hardwareModel;
 
         #endregion
 
@@ -27,11 +29,10 @@ namespace NNR.CoPackageInspector.RT.Framework.Model.Station
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        protected AbstractSation(List<IStationFunction> stationFunctionList, IStationFunction stationFunction, IFrontControllerModel frontControllerModel, int id)
+        protected AbstractSation(List<IStationFunction> stationFunctionList, IStationFunction stationFunction, int id)
         {
             _id = id;
             _stationFunctionQueue = new StationFunctionQueue(stationFunctionList, stationFunction);
-            _hardwareModel = frontControllerModel;
         }
 
         #region プロパティ
@@ -60,7 +61,7 @@ namespace NNR.CoPackageInspector.RT.Framework.Model.Station
         /// </summary>
         public void RotateFunction()
         {
-            _stationFunctionQueue.rotate();
+            _stationFunctionQueue.Rotate();
         }
 
         /// <summary>
