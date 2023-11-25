@@ -1,4 +1,5 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
+using NNR.CoPakageInspector.RT.MainApp.View.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,11 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
 
         private void _buttonPowerOff_Click(object sender, EventArgs e)
         {
+            var dlg = new ApplicationExitAskForm();
+            DialogResult dr = dlg.ShowDialog();
+
+            if (dr == DialogResult.Cancel) return;
+
             var mainContext = MainAppContextProvider.GetInstance();
 
             mainContext.MainAppForm.Close();

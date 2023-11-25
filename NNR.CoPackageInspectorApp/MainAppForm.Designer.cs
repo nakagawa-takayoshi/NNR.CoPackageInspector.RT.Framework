@@ -39,7 +39,6 @@ namespace NNR.CoPackageInspectorApp
             // 
             // _mainSplitContainer
             // 
-            this._mainSplitContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this._mainSplitContainer, "_mainSplitContainer");
             this._mainSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this._mainSplitContainer.Name = "_mainSplitContainer";

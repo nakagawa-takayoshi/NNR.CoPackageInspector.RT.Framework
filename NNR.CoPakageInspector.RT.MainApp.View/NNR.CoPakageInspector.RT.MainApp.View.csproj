@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\ApplicationExitAskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ApplicationExitAskForm.designer.cs">
+      <DependentUpon>ApplicationExitAskForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PowerPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -50,6 +56,11 @@
       <DependentUpon>PowerPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SubPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -58,8 +69,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Dialogs\ApplicationExitAskForm.resx">
+      <DependentUpon>ApplicationExitAskForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PowerPanel.resx">
       <DependentUpon>PowerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SubPanel.resx">
       <DependentUpon>SubPanel.cs</DependentUpon>
