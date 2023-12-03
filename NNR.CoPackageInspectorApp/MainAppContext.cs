@@ -1,4 +1,5 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View;
 using System;
 using System.Collections.Generic;
@@ -8,43 +9,29 @@ using System.Threading;
 
 namespace NNR.CoPackageInspectorApp
 {
-    public class MainAppContext : IMainAppContext
+    public class MainAppContext : IMainAppContext, IMainAppContextWriter
     {
         private IMainAppForm _mainAppForm;
-        //private IMainAppSynchronizationContext _mainAppSynchronizationContext;
-        //private MainAppModel _mainAppModel;
+        private SynchronizationContext _mainAppSynchronizationContext;
 
         public IMainAppForm MainAppForm => _mainAppForm;
 
-        //public IMainAppModel MainAppModel => _mainAppModel;
+        public IMainAppModel MainAppModel { get; set; }
 
-        //public SynchronizationContext MainAppSyncchronizationContext => _mainAppSynchronizationContext.MainAppSynchronizationContext;
+        public SynchronizationContext MainAppSyncchronizationContext => _mainAppSynchronizationContext;
 
 
         //public IHardwareModel hardwareModel => throw new NotImplementedException();
-
-        /// <summary>
-        /// インスタンス取得
-        /// </summary>
-        /// <returns></returns>
 
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         /// <param name="mainAppForm"></param>
-        public MainAppContext(IMainAppForm mainAppForm)
+        internal MainAppContext(IMainAppForm mainAppForm)
         {
             _mainAppForm = mainAppForm;
-            //_mainAppSynchronizationContext = mainAppForm;
-
-            //var hardwareModelFactory = new HardwareModelFactory();
-            //var hardWareModel = hardwareModelFactory.Create();
-
-            //var mainAppModelFactory = new MainAppModelAbstractFactory();
-            //mainAppModelFactory.AddHardwareModel(hardwareModelFactory);
-
-            //_mainAppModel = mainAppModelFactory.Create();
+            _mainAppSynchronizationContext = SynchronizationContext.Current;
         }
     }
 }

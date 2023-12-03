@@ -8,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace NNR.CoPackageInspector.RT.MainApp.Interface
 {
-    public interface IMainAppContext
+    public interface IMainAppContextWriter
     {
-        IMainAppForm MainAppForm { get; }
 
-        IMainAppModel MainAppModel { get;}
+       IMainAppModel MainAppModel { set; }
     }
 }

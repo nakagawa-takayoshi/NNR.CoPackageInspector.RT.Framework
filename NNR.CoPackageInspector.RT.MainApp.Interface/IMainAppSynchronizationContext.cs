@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
-namespace NNR.CoPackageInspector.RT.MainApp.Interface.View
+namespace NNR.CoPackageInspector.RT.MainApp.Interface
 {
-    public interface IMainAppForm
+    public interface IMainAppSynchronizationContext
     {
         SynchronizationContext MainAppSynchronizationContext { get; }
-
-        void Close();
     }
 }

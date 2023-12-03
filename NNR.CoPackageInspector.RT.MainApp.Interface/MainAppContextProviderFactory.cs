@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NNR.CoPackageInspector.RT.MainApp.Interface
 {
-    public static class MainAppContextFactory
+    public static class MainAppContextProviderFactory
     {
         public static MainAppContextProvider Create(IMainAppContext appContext) 
         {

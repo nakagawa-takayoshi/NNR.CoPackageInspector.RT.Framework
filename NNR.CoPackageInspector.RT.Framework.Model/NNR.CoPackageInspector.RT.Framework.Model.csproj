@@ -64,6 +64,10 @@
     <Compile Include="Station\Enums\FunctionStationDiscriptor.cs" />
     <Compile Include="Station\Interface\IStationFunction.cs" />
     <Compile Include="Station\Interface\IStationModel.cs" />
+    <Compile Include="Station\StationCollection.cs" />
+    <Compile Include="Station\StationCollectionItem.cs" />
+    <Compile Include="Station\StationFunction.cs" />
+    <Compile Include="Station\StationFunctionCollection.cs" />
     <Compile Include="Station\StationFunctionQueue.cs" />
     <Compile Include="Workpiece\EventArguments\WorkpieceChangedEventArgs.cs" />
     <Compile Include="Workpiece\EventArguments\WorkSizeChanedEventArgs.cs" />

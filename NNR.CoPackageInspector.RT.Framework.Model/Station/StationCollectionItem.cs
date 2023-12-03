@@ -1,12 +1,12 @@
-﻿using System;
+﻿using NNR.CoPackageInspector.RT.Framework.Model.Station;
+using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NR.Inspector.RT.Framework.HardwareIO.Model;
-using NR.Inspector.RT.Framework.Model.Interface;
 
-namespace NR.Inspector.RT.Framework.Model
+namespace NNR.CoPakageInspector.RT.MainApp.Model.Station
 {
     public class StationCollectionItem : AbstractSation
     {
@@ -14,8 +14,8 @@ namespace NR.Inspector.RT.Framework.Model
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public StationCollectionItem(List<IStationFunction> stationFunctionList, IStationFunction originFunction, IFrontControllerModel frontControllerModel)
-            : base(stationFunctionList, originFunction, frontControllerModel, 1)
+        public StationCollectionItem(StationFunctionCollection stationFunctionCollection, IStationFunction thisFunction)
+            : base(stationFunctionCollection, thisFunction, 1)
         {
         }
     }

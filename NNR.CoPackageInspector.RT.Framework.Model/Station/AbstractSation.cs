@@ -2,6 +2,7 @@
 using NNR.CoPackageInspector.RT.Framework.Controller.Station;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
+using NNR.CoPakageInspector.RT.MainApp.Model.Station;
 using NNR.Liblary.Utility;
 using System;
 using System.Collections.Generic;
@@ -29,10 +30,10 @@ namespace NNR.CoPackageInspector.RT.Framework.Model.Station
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        protected AbstractSation(List<IStationFunction> stationFunctionList, IStationFunction stationFunction, int id)
+        protected AbstractSation(StationFunctionCollection stationFunctions, IStationFunction stationFunction, int id)
         {
             _id = id;
-            _stationFunctionQueue = new StationFunctionQueue(stationFunctionList, stationFunction);
+            _stationFunctionQueue = new StationFunctionQueue(stationFunctions, stationFunction);
         }
 
         #region プロパティ

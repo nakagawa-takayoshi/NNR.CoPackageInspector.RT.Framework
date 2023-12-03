@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NR.Inspector.RT.Framework.Model
+namespace NNR.CoPakageInspector.RT.MainApp.Model.Station
 {
     public class StationCollection
     {

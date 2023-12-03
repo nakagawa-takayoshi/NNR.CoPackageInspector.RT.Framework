@@ -1,5 +1,6 @@
 ﻿using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
+using NNR.CoPakageInspector.RT.MainApp.Model.Station;
 using RoundRobin;
 using System;
 using System.Collections.Generic;
@@ -24,10 +25,10 @@ namespace NNR.CoPackageInspector.RT.Framework.Controller.Station
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public StationFunctionQueue(List<IStationFunction> stationFunctionList, IStationFunction oringStationFunction)
+        public StationFunctionQueue(StationFunctionCollection stationFunctionCollection, IStationFunction oringStationFunction)
         {
             _originStationFunction = oringStationFunction;
-            _stationFunctionRoundRobin = new RoundRobinList<IStationFunction>(stationFunctionList);
+            _stationFunctionRoundRobin = new RoundRobinList<IStationFunction>(stationFunctionCollection.Items);
             _stationFunctionRoundRobin.ResetTo(_originStationFunction);
             _currentStationFunction = oringStationFunction;
         }
