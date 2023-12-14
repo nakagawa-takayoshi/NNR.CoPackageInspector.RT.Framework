@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 
 namespace NNR.CoPakageInspector.RT.MainApp.Model
 {
-    public class MainAppModel : IMainAppModel, IMainAppModelWriter
+    internal class MainAppModel : IMainAppModel, IMainAppModelWriter
     {
 
         public StationCollection Stations { get; set; }
+
+        public IApplicationCondition AppCondition { get; }
 
         public static IMainAppModelWriter Create()
         {
@@ -24,7 +26,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.Model
         /// </summary>
         internal MainAppModel()
         {
-            
+            AppCondition = new ApplicationCondition();
         }
     }
 }
