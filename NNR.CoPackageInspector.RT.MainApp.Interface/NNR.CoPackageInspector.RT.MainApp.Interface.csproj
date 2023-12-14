@@ -48,6 +48,8 @@
     <Compile Include="MainAppContextProviderFactory.cs" />
     <Compile Include="MainAppContextProvider.cs" />
     <Compile Include="MainAppModelProvider.cs" />
+    <Compile Include="Model\Enums\ApplicationConditionState.cs" />
+    <Compile Include="Model\IApplicationCondition.cs" />
     <Compile Include="Model\IMainAppModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\IMainAppForm.cs" />
