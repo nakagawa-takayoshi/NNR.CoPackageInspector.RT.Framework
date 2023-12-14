@@ -1,6 +1,8 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
 using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View;
+using NNR.CoPakageInspector.RT.MainApp.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +39,9 @@ namespace NNR.CoPackageInspectorApp
             base.OnLoad(e);
 
             var mainAppContext = MainAppContextProvider.GetInstance();
+            var overViewPanel = new OverViewPanel();
+            _mainSplitContainer.Panel1.Controls.Add(overViewPanel);
+            overViewPanel.Visible = true;
 
             FormBorderStyle = FormBorderStyle.None;
             Size = new Size(1280, 760);
@@ -44,6 +49,8 @@ namespace NNR.CoPackageInspectorApp
             _mainSplitContainer.IsSplitterFixed = true;
 
             var mainAppModel = MainAppModelProvider.GetInstance();
+            mainAppModel.AppCondition.State = ApplicationConditionState.Running;
+
         }
 
         /// <summary>
@@ -51,6 +58,9 @@ namespace NNR.CoPackageInspectorApp
         /// </summary>
         protected override void OnClosed(EventArgs e)
         {
+            var mainAppModel = MainAppModelProvider.GetInstance();
+            mainAppModel.AppCondition.State = ApplicationConditionState.Exit;
+            
             base.OnClosed(e);
         }
     }
