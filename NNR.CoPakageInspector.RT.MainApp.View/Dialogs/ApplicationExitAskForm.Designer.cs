@@ -39,16 +39,18 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Dialogs
             this._exitComboxBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this._exitComboxBox.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this._exitComboxBox.FormattingEnabled = true;
-            this._exitComboxBox.Location = new System.Drawing.Point(59, 52);
+            this._exitComboxBox.Location = new System.Drawing.Point(98, 78);
+            this._exitComboxBox.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this._exitComboxBox.Name = "_exitComboxBox";
-            this._exitComboxBox.Size = new System.Drawing.Size(248, 27);
+            this._exitComboxBox.Size = new System.Drawing.Size(411, 37);
             this._exitComboxBox.TabIndex = 0;
             // 
             // _okButton
             // 
-            this._okButton.Location = new System.Drawing.Point(84, 108);
+            this._okButton.Location = new System.Drawing.Point(140, 162);
+            this._okButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this._okButton.Name = "_okButton";
-            this._okButton.Size = new System.Drawing.Size(89, 36);
+            this._okButton.Size = new System.Drawing.Size(148, 54);
             this._okButton.TabIndex = 1;
             this._okButton.Text = "OK";
             this._okButton.UseVisualStyleBackColor = true;
@@ -57,9 +59,10 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Dialogs
             // _cancelButton
             // 
             this._cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this._cancelButton.Location = new System.Drawing.Point(207, 108);
+            this._cancelButton.Location = new System.Drawing.Point(345, 162);
+            this._cancelButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this._cancelButton.Name = "_cancelButton";
-            this._cancelButton.Size = new System.Drawing.Size(83, 36);
+            this._cancelButton.Size = new System.Drawing.Size(138, 54);
             this._cancelButton.TabIndex = 2;
             this._cancelButton.Text = "Cancel";
             this._cancelButton.UseVisualStyleBackColor = true;
@@ -68,14 +71,16 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Dialogs
             // ApplicationExitAskForm
             // 
             this.AcceptButton = this._okButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this._cancelButton;
-            this.ClientSize = new System.Drawing.Size(380, 163);
+            this.ClientSize = new System.Drawing.Size(633, 244);
             this.Controls.Add(this._cancelButton);
             this.Controls.Add(this._okButton);
             this.Controls.Add(this._exitComboxBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ApplicationExitAskForm";

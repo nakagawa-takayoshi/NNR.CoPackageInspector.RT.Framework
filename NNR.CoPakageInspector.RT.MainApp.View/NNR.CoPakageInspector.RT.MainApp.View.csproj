@@ -49,6 +49,12 @@
     <Compile Include="Dialogs\ApplicationExitAskForm.designer.cs">
       <DependentUpon>ApplicationExitAskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OverViewPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OverViewPanel.Designer.cs">
+      <DependentUpon>OverViewPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="PowerPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -67,10 +73,19 @@
     <Compile Include="SubPanel.Designer.cs">
       <DependentUpon>SubPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="TitleBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TitleBar.Designer.cs">
+      <DependentUpon>TitleBar.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dialogs\ApplicationExitAskForm.resx">
       <DependentUpon>ApplicationExitAskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverViewPanel.resx">
+      <DependentUpon>OverViewPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PowerPanel.resx">
       <DependentUpon>PowerPanel.cs</DependentUpon>
@@ -81,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubPanel.resx">
       <DependentUpon>SubPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TitleBar.resx">
+      <DependentUpon>TitleBar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
