@@ -73,7 +73,6 @@
     <Compile Include="Workpiece\EventArguments\WorkpieceChangedEventArgs.cs" />
     <Compile Include="Workpiece\EventArguments\WorkSizeChanedEventArgs.cs" />
     <Compile Include="Workpiece\Interface\Enums.cs" />
-    <Compile Include="Workpiece\Interface\IWorkpieceModel.cs" />
     <Compile Include="Workpiece\WorkpieceModel.cs" />
     <Compile Include="Workpiece\WorkpieceSize.cs" />
   </ItemGroup>
@@ -84,6 +83,10 @@
     <Folder Include="Workpiece\Enums\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Interface\NNR.CoPackageInspector.RT.Framework.Interface.csproj">
+      <Project>{d788ea2f-68ab-40c8-9b1d-78fd43b550d1}</Project>
+      <Name>NNR.CoPackageInspector.RT.Framework.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NNR.Liblary.Utility\NNR.Liblary.Utility.csproj">
       <Project>{e9a1ea66-8c5e-489e-b8ac-a702080f688b}</Project>
       <Name>NNR.Liblary.Utility</Name>

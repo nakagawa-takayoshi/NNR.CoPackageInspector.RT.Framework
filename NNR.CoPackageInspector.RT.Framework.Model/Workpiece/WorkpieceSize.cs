@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NNR.CoPackageInspector.RT.Framework.Interface.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NNR.CopackageInspector.RT.Framework.Model.Workpiece
 {
-    public class WorkpieceSize
+    public class WorkpieceSize :IWorkpieceSize
     {
         private readonly float _width;
         private readonly float _height;
@@ -19,7 +20,7 @@ namespace NNR.CopackageInspector.RT.Framework.Model.Workpiece
         /// <summary>
         /// 高さ
         /// </summary>
-        public float Height => _height;
+        public float Height => _height; 
 
         /// <summary>
         /// コンストラクタ

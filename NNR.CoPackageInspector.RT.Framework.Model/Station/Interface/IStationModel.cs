@@ -1,6 +1,6 @@
-﻿using NNR.CopackageInspector.RT.Framework.Model.Workpiece.Interface;
+﻿using NNR.CoPackageInspector.RT.Framework.Interface.Model;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
-using NNR.Liblary.Utility;
+using NNR.Liblary.Utility.Maybe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +39,6 @@ namespace NNR.CoPackageInspector.RT.Framework.Model.Station.Interface
 
         void AttachWorkpiece(IWorkpieceModel workMode);
 
-        void DettachWorkpiece(out IAny<IWorkpieceModel> workpiece);
+        void DettachWorkpiece(out IMaybe<IWorkpieceModel> workpiece);
     }
 }

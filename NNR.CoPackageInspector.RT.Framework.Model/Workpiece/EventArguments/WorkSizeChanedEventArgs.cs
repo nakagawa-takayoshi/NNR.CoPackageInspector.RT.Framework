@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using NNR.CopackageInspector.RT.Framework.Model.Workpiece;
 
-namespace NR.Inspector.RT.Framework.Model.EventArguments
+namespace NNR.CoPackageInspector.RT.Framework.Interface.Model.EventArguments
 {
     public class WorkSizeChanedEventArg : System.EventArgs
     {

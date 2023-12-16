@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-using NNR.CopackageInspector.RT.Framework.Model.Workpiece.Interface;
-using NR.Inspector.RT.Framework.Model.EventArguments;
+using NNR.CoPackageInspector.RT.Framework.Interface.Model;
+using NNR.CoPackageInspector.RT.Framework.Interface.Model.EventArguments;
 
 namespace NNR.CopackageInspector.RT.Framework.Model.Workpiece
 {
@@ -23,7 +23,7 @@ namespace NNR.CopackageInspector.RT.Framework.Model.Workpiece
         /// <summary>
         /// ワークサイズ　プロパティ
         /// </summary>
-        public WorkpieceSize Size => _workSize;
+        public IWorkpieceSize Size => _workSize;
             
 
         /// <summary>

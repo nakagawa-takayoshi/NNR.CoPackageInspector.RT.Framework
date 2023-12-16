@@ -1,4 +1,5 @@
 ﻿using NNR.CopackageInspector.RT.Framework.Model.Workpiece.Interface;
+using NNR.CoPackageInspector.RT.Framework.Interface.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

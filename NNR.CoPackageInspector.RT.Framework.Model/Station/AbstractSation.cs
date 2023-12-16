@@ -1,5 +1,6 @@
 ﻿using NNR.CopackageInspector.RT.Framework.Model.Workpiece.Interface;
 using NNR.CoPackageInspector.RT.Framework.Controller.Station;
+using NNR.CoPackageInspector.RT.Framework.Interface.Model;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
 using NNR.CoPakageInspector.RT.MainApp.Model.Station;
