@@ -70,9 +70,6 @@
     <Compile Include="Station\StationFunction.cs" />
     <Compile Include="Station\StationFunctionCollection.cs" />
     <Compile Include="Station\StationFunctionQueue.cs" />
-    <Compile Include="Workpiece\EventArguments\WorkpieceChangedEventArgs.cs" />
-    <Compile Include="Workpiece\EventArguments\WorkSizeChanedEventArgs.cs" />
-    <Compile Include="Workpiece\Interface\Enums.cs" />
     <Compile Include="Workpiece\WorkpieceModel.cs" />
     <Compile Include="Workpiece\WorkpieceSize.cs" />
   </ItemGroup>
@@ -81,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Workpiece\Enums\" />
+    <Folder Include="Workpiece\EventArguments\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Interface\NNR.CoPackageInspector.RT.Framework.Interface.csproj">

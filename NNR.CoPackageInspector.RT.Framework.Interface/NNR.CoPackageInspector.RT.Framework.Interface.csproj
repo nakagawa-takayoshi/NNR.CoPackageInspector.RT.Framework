@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums\WorkpieceChangedEventID.cs" />
+    <Compile Include="EventArguments\WorkpieceChangedEventArgs.cs" />
+    <Compile Include="EventArguments\WorkSizeChanedEventArgs.cs" />
     <Compile Include="Model\IRobotArmsModel.cs" />
     <Compile Include="Model\IWorkpieceModel.cs" />
     <Compile Include="Model\IWorkpieceSize.cs" />
@@ -52,5 +55,6 @@
       <Name>NNR.Liblary.Utility</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

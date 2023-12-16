@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using NNR.CoPackageInspector.RT.Framework.Interface.Model;
-using NNR.CoPackageInspector.RT.Framework.Interface.Model.EventArguments;
 
 namespace NNR.CopackageInspector.RT.Framework.Model.Workpiece
 {
