@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Factory\MainAppModelAbstractFactory.cs" />
     <Compile Include="MainAppRunner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,6 +59,9 @@
       <Project>{0db18b88-59cb-43aa-ac96-86c33ea2bfbb}</Project>
       <Name>NNR.CoPakageInspector.RT.MainApp.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Factory\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
