@@ -4,6 +4,7 @@ using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
 using NNR.CoPakageInspector.RT.MainApp.Model.Station;
 using NNR.Liblary.Utility;
+using NNR.Liblary.Utility.Maybe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace NNR.CoPackageInspector.RT.Framework.Model.Station
         protected readonly Guid _guid = new Guid();
         protected int _id;
         protected StationFunctionQueue _stationFunctionQueue;
-        protected IAny<IWorkpieceModel> _workpiece;
+        protected IMaybe<IWorkpieceModel> _workpiece;
 
         #endregion
 
@@ -71,7 +72,7 @@ namespace NNR.CoPackageInspector.RT.Framework.Model.Station
         /// <param name="workpieceModel"></param>
         public void AttachWorkpiece(IWorkpieceModel workpieceModel)
         {
-            _workpiece = Any.Create<IWorkpieceModel>(workpieceModel);
+            _workpiece = Maybe.Create<IWorkpieceModel>(workpieceModel);
 
             OnAttachWorkpiece();
         }
@@ -80,7 +81,7 @@ namespace NNR.CoPackageInspector.RT.Framework.Model.Station
         /// ワークを解除する
         /// </summary>
         /// <param name="workpiece"></param>
-        public void DettachWorkpiece(out IAny<IWorkpieceModel> workpiece)
+        public void DettachWorkpiece(out IMaybe<IWorkpieceModel> workpiece)
         {
             workpiece = _workpiece;
             if (!_workpiece.HasObject) return;

@@ -60,6 +60,7 @@
     <Compile Include="AutoPilot\Enums\AutoPilotState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AutoPilot\WorkpieceInspectResult.cs" />
+    <Compile Include="RobotArms\AbstractRobotArmsModel.cs" />
     <Compile Include="Station\AbstractSation.cs" />
     <Compile Include="Station\Enums\FunctionStationDiscriptor.cs" />
     <Compile Include="Station\Interface\IStationFunction.cs" />
