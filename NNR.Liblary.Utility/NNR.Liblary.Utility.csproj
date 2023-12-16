@@ -41,8 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Any\Any.cs" />
-    <Compile Include="Any\IAny.cs" />
     <Compile Include="Maybe\IMaybe.cs" />
     <Compile Include="Maybe\Maybe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
