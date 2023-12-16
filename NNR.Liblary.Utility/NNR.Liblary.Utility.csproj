@@ -43,7 +43,10 @@
   <ItemGroup>
     <Compile Include="Any\Any.cs" />
     <Compile Include="Any\IAny.cs" />
+    <Compile Include="Maybe\IMaybe.cs" />
+    <Compile Include="Maybe\Maybe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

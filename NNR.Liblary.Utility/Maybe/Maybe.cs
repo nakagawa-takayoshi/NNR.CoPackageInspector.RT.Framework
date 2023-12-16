@@ -8,6 +8,7 @@ namespace NNR.Liblary.Utility.Maybe
 {
     public class Maybe
     {
+
         private class EmptyObject<T> : IMaybe<T>
         {
             public bool HasObject => false;
@@ -43,6 +44,9 @@ namespace NNR.Liblary.Utility.Maybe
             return new EmptyObject<T>();
         }
 
+        /// <summary>
+        /// Maybeオブジェクトの生成
+        /// </summary>
         public static IMaybe<T> Create<T>(T obj)
         {
             return new Something<T>(obj);
