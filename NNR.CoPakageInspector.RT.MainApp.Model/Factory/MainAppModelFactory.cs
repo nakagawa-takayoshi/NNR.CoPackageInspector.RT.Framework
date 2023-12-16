@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Runner.Factory
+namespace NNR.CoPakageInspector.RT.MainApp.Model.Factory
 {
     public class MainAppModelFactory
     {

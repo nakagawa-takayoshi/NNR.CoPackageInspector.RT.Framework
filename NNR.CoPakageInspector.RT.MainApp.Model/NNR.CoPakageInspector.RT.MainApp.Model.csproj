@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="ApplicationCondition.cs" />
     <Compile Include="ApplicationConditionChangeEventArgs.cs" />
+    <Compile Include="Factory\MainAppModelAbstractFactory.cs" />
     <Compile Include="Factory\MainAppModelFactory.cs" />
     <Compile Include="Interface\IMainAppModelWriter.cs" />
     <Compile Include="MainAppModel.cs" />
