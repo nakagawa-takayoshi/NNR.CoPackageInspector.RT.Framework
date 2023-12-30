@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="AutoPilot\AbstractAutoPilotObserver.cs" />
     <Compile Include="AutoPilot\AutoPilotObsavable.cs" />
-    <Compile Include="AutoPilot\AutoPilotPortInObserver.cs" />
+    <Compile Include="AutoPilot\AbstractAutoPilotPortInObserver.cs" />
     <Compile Include="AutoPilot\AutoPilotPortOutObserver.cs" />
     <Compile Include="AutoPilot\Interface\IAutoPilotObserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

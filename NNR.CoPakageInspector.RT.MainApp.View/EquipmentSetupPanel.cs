@@ -1,5 +1,4 @@
-﻿using NNR.CoPakageInspector.RT.MainApp.View.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NNR.CoPakageInspector.RT.MainApp.View
 {
-    public partial class OverViewPanel : UserControl
+    public partial class EquipmentSetupPanel : UserControl
     {
-        public OverViewPanel()
+        public EquipmentSetupPanel()
         {
             InitializeComponent();
         }

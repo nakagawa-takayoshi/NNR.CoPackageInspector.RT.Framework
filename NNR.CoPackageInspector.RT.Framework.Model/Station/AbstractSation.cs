@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace NNR.CoPackageInspector.RT.Framework.Model.Station
 {
-    public abstract class AbstractSation : IStationModel
+    public abstract class AbstractSation : IStationModel, IStationItem
     {
         #region 内部メモリ
 
@@ -54,9 +54,16 @@ namespace NNR.CoPackageInspector.RT.Framework.Model.Station
         /// <summary>
         /// 機能識別子
         /// </summary>
-        public virtual FunctionStationDiscriptor Function => _stationFunctionQueue.CurrentFunction;
+        public FunctionStationDiscriptor Function => _stationFunctionQueue.CurrentFunction;
+
+        public IWorkpieceModel Workpiece => _workpiece.Object;
 
         #endregion
+
+        public void ResetToOrigin()
+        {
+            _stationFunctionQueue.ResetToOrigin();
+        }
 
         /// <summary>
         /// 機能キューを回します

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AutoPilotName" xml:space="preserve">
+    <value>自動運転</value>
+  </data>
   <data name="ExitMenuApplicationExit" xml:space="preserve">
     <value>アプリケーションの終了</value>
   </data>
@@ -131,5 +134,12 @@
   </data>
   <data name="ExitMenuSleep" xml:space="preserve">
     <value>スリープ</value>
+  </data>
+  <data name="OverViewName" xml:space="preserve">
+    <value>OvweView</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PowerOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PowerOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

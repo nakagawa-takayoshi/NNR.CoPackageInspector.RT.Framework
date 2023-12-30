@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D788EA2F-68AB-40C8-9B1D-78FD43B550D1}</ProjectGuid>
+    <ProjectGuid>{FC19C5E8-0CE8-4314-9FC3-A3C272867AE9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NNR.CoPackageInspector.RT.Framework.Interface</RootNamespace>
-    <AssemblyName>NNR.CoPackageInspector.RT.Framework.Interface</AssemblyName>
+    <RootNamespace>NNR.CoPakageInspector.RT.MainApp.Controller</RootNamespace>
+    <AssemblyName>NNR.CoPakageInspector.RT.MainApp.Controller</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,22 +41,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enums\WorkpieceChangedEventID.cs" />
-    <Compile Include="EventArguments\WorkpieceChangedEventArgs.cs" />
-    <Compile Include="EventArguments\WorkSizeChanedEventArgs.cs" />
-    <Compile Include="Model\IRobotArmsModel.cs" />
-    <Compile Include="Model\IStationCollection.cs" />
-    <Compile Include="Model\IStationItem.cs" />
-    <Compile Include="Model\IWorkpieceModel.cs" />
-    <Compile Include="Model\IWorkpieceSize.cs" />
+    <Compile Include="AutoPilot\AutoPilotPortInObserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NNR.Liblary.Utility\NNR.Liblary.Utility.csproj">
-      <Project>{e9a1ea66-8c5e-489e-b8ac-a702080f688b}</Project>
-      <Name>NNR.Liblary.Utility</Name>
+    <ProjectReference Include="..\NNR.CopackageInspector.RT.Framework.Controller\NNR.CopackageInspector.RT.Framework.Controller.csproj">
+      <Project>{993cd521-fcb6-4202-baed-0d47093d8600}</Project>
+      <Name>NNR.CopackageInspector.RT.Framework.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Interface\NNR.CoPackageInspector.RT.Framework.Interface.csproj">
+      <Project>{d788ea2f-68ab-40c8-9b1d-78fd43b550d1}</Project>
+      <Name>NNR.CoPackageInspector.RT.Framework.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Model\NNR.CoPackageInspector.RT.Framework.Model.csproj">
+      <Project>{326c229a-bb48-4796-a5c2-f44eebb0ee1c}</Project>
+      <Name>NNR.CoPackageInspector.RT.Framework.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NNR.CoPackageInspector.RT.MainApp.Interface\NNR.CoPackageInspector.RT.MainApp.Interface.csproj">
+      <Project>{18ed2796-92e0-487c-bb20-7b69e130707f}</Project>
+      <Name>NNR.CoPackageInspector.RT.MainApp.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.Model\NNR.CoPakageInspector.RT.MainApp.Model.csproj">
+      <Project>{0db18b88-59cb-43aa-ac96-86c33ea2bfbb}</Project>
+      <Name>NNR.CoPakageInspector.RT.MainApp.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

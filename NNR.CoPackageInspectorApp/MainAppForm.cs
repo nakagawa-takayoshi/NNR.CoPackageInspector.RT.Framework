@@ -43,7 +43,7 @@ namespace NNR.CoPackageInspectorApp
             _mainSplitContainer.Panel1.Controls.Add(overViewPanel);
             overViewPanel.Visible = true;
 
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Size = new Size(1280, 760);
 
             _mainSplitContainer.IsSplitterFixed = true;

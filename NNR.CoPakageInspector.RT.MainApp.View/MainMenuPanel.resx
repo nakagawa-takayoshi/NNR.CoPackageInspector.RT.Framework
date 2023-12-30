@@ -117,4 +117,106 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="_buttonOverView.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 15.75pt, style=Bold</value>
+  </data>
+  <data name="_buttonOverView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 36</value>
+  </data>
+  <data name="_buttonOverView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 61</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_buttonOverView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_buttonOverView.Text" xml:space="preserve">
+    <value>OverView</value>
+  </data>
+  <data name="&gt;&gt;_buttonOverView.Name" xml:space="preserve">
+    <value>_buttonOverView</value>
+  </data>
+  <data name="&gt;&gt;_buttonOverView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_buttonOverView.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_buttonOverView.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="_buttonAutoPilot.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 15.75pt, style=Bold</value>
+  </data>
+  <data name="_buttonAutoPilot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 197</value>
+  </data>
+  <data name="_buttonAutoPilot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 61</value>
+  </data>
+  <data name="_buttonAutoPilot.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="_buttonAutoPilot.Text" xml:space="preserve">
+    <value>AutoPilot</value>
+  </data>
+  <data name="&gt;&gt;_buttonAutoPilot.Name" xml:space="preserve">
+    <value>_buttonAutoPilot</value>
+  </data>
+  <data name="&gt;&gt;_buttonAutoPilot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_buttonAutoPilot.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_buttonAutoPilot.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_buttonEquipment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 15.75pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_buttonEquipment.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="_buttonEquipment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 112</value>
+  </data>
+  <data name="_buttonEquipment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 61</value>
+  </data>
+  <data name="_buttonEquipment.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="_buttonEquipment.Text" xml:space="preserve">
+    <value>Equipment</value>
+  </data>
+  <data name="&gt;&gt;_buttonEquipment.Name" xml:space="preserve">
+    <value>_buttonEquipment</value>
+  </data>
+  <data name="&gt;&gt;_buttonEquipment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_buttonEquipment.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_buttonEquipment.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 641</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainMenuPanel</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

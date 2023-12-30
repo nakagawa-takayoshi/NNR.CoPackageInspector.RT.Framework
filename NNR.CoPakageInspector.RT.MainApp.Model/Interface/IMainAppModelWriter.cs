@@ -1,4 +1,4 @@
-﻿using NNR.CoPakageInspector.RT.MainApp.Model.Station;
+﻿using NNR.CoPackageInspector.RT.Framework.Interface.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,6 @@ namespace NNR.CoPakageInspector.RT.MainApp.Model.Interface
 {
     public interface IMainAppModelWriter
     {
-        StationCollection Stations { set; }
+        IStationCollection Stations { set; }
     }
 }

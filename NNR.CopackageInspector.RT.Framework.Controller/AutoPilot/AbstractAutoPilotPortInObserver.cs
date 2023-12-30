@@ -2,6 +2,8 @@
 using NNR.CopackageInspector.RT.Framework.Model.AutoPilot;
 using NNR.CopackageInspector.RT.Framework.Model.AutoPilot.Enums;
 using NNR.CoPackageInspector.RT.Framework.Controller.Interface;
+using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
+using NNR.CoPakageInspector.RT.MainApp.Model.Station;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +13,11 @@ using System.Threading.Tasks;
 
 namespace NNR.CopackageInspector.RT.Framework.Controller.AutoPilot
 {
-    public class AutoPilotPortInObserver: AbstractAutoPilotObserver, IAutoPilotObserver, IDisposable
+    public abstract class AbstractAutoPilotPortInObserver: AbstractAutoPilotObserver, IAutoPilotObserver, IDisposable
     {
-        private IAutoPilotObserver _nextObserver;
+        protected IAutoPilotObserver _nextObserver;
 
-        public AutoPilotPortInObserver(IAutoPilotObserver nextObserver) 
+        public AbstractAutoPilotPortInObserver(IAutoPilotObserver nextObserver) 
         {
             _nextObserver = nextObserver;
 

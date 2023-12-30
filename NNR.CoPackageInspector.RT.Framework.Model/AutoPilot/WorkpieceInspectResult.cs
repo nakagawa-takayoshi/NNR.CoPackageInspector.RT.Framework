@@ -8,5 +8,11 @@ namespace NNR.CopackageInspector.RT.Framework.Model.AutoPilot
 {
     public class WorkpieceInspectResult
     {
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        public WorkpieceInspectResult() 
+        { 
+        }
     }
 }

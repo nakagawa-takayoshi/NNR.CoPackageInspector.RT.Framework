@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using NNR.CoPackageInspector.RT.Framework.Interface.Model;
+using NNR.CoPackageInspector.RT.Framework.Interface.EventArguments;
 
 namespace NNR.CopackageInspector.RT.Framework.Model.Workpiece
 {
@@ -50,10 +51,13 @@ namespace NNR.CopackageInspector.RT.Framework.Model.Workpiece
         /// <param name="e"></param>
         private void _onSizeChangeDefault(WorkSizeChanedEventArg e)
         {
-            _workSize = e.Size;
+            _workSize = (WorkpieceSize)e.Size;
         }
 
 
+        /// <summary>
+        /// リソースの破棄
+        /// </summary>
         public void Dispose()
         {
             _sizeChangedEventHandler -= _onSizeChangeDefault;

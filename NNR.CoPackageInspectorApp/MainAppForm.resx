@@ -150,7 +150,7 @@
     <value>1, 1, 1, 1</value>
   </data>
   <data name="subPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>240, 721</value>
+    <value>237, 760</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="subPanel1.TabIndex" type="System.Int32, mscorlib">
@@ -181,10 +181,10 @@
     <value>1</value>
   </data>
   <data name="_mainSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 721</value>
+    <value>1280, 760</value>
   </data>
   <data name="_mainSplitContainer.SplitterDistance" type="System.Int32, mscorlib">
-    <value>1023</value>
+    <value>1042</value>
   </data>
   <data name="_mainSplitContainer.SplitterWidth" type="System.Int32, mscorlib">
     <value>1</value>
@@ -211,7 +211,7 @@
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1264, 721</value>
+    <value>1280, 760</value>
   </data>
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

@@ -68,6 +68,10 @@
     <Compile Include="Station\StationFunctionFactory.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Interface\NNR.CoPackageInspector.RT.Framework.Interface.csproj">
+      <Project>{D788EA2F-68AB-40C8-9B1D-78FD43B550D1}</Project>
+      <Name>NNR.CoPackageInspector.RT.Framework.Interface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Model\NNR.CoPackageInspector.RT.Framework.Model.csproj">
       <Project>{326c229a-bb48-4796-a5c2-f44eebb0ee1c}</Project>
       <Name>NNR.CoPackageInspector.RT.Framework.Model</Name>

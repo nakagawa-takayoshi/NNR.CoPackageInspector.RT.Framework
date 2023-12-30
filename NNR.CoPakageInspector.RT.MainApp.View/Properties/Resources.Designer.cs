@@ -61,6 +61,15 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Properties {
         }
         
         /// <summary>
+        ///   自動運転 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string AutoPilotName {
+            get {
+                return ResourceManager.GetString("AutoPilotName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   アプリケーションの終了 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string ExitMenuApplicationExit {
@@ -102,6 +111,25 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Properties {
         internal static string ExitMenuSleep {
             get {
                 return ResourceManager.GetString("ExitMenuSleep", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   OvweView に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string OverViewName {
+            get {
+                return ResourceManager.GetString("OverViewName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap PowerOff {
+            get {
+                object obj = ResourceManager.GetObject("PowerOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

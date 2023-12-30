@@ -1,4 +1,5 @@
-﻿using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
+﻿using NNR.CoPackageInspector.RT.Framework.Interface.Model;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
 using NNR.CoPakageInspector.RT.MainApp.Model.Interface;
 using NNR.CoPakageInspector.RT.MainApp.Model.Station;
 using System;
@@ -12,7 +13,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.Model
     internal class MainAppModel : IMainAppModel, IMainAppModelWriter
     {
 
-        public StationCollection Stations { get; set; }
+        public IStationCollection Stations { get; set; }
 
         public IApplicationCondition AppCondition { get; }
 

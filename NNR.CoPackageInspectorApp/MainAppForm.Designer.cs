@@ -49,6 +49,7 @@ namespace NNR.CoPackageInspectorApp
             // 
             // subPanel1
             // 
+            this.subPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             resources.ApplyResources(this.subPanel1, "subPanel1");
             this.subPanel1.Name = "subPanel1";
             // 
@@ -57,7 +58,7 @@ namespace NNR.CoPackageInspectorApp
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this._mainSplitContainer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainAppForm";

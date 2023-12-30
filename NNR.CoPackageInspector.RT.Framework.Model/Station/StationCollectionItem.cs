@@ -10,7 +10,6 @@ namespace NNR.CoPakageInspector.RT.MainApp.Model.Station
 {
     public class StationCollectionItem : AbstractSation
     {
-
         /// <summary>
         /// コンストラクタ
         /// </summary>

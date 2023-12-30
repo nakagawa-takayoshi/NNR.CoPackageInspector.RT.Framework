@@ -43,12 +43,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoPilotPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AutoPilotPanel.Designer.cs">
+      <DependentUpon>AutoPilotPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dialogs\ApplicationExitAskForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dialogs\ApplicationExitAskForm.designer.cs">
       <DependentUpon>ApplicationExitAskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EquipmentSetupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EquipmentSetupPanel.Designer.cs">
+      <DependentUpon>EquipmentSetupPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\ITitleBarItem.cs" />
+    <Compile Include="MainMenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainMenuPanel.Designer.cs">
+      <DependentUpon>MainMenuPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CaptionCollection.cs" />
+    <Compile Include="Model\Factory\TitleBarPolygonFactory.cs" />
+    <Compile Include="Interface\ITitleBarPolygon.cs" />
+    <Compile Include="Model\TitleBarChildPolygon.cs" />
+    <Compile Include="Model\TitleBarFirstPolygon.cs" />
+    <Compile Include="Model\TitleBarParentPolygon.cs" />
     <Compile Include="OverViewPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -79,10 +104,21 @@
     <Compile Include="TitleBar.Designer.cs">
       <DependentUpon>TitleBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\TitleBarItem.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AutoPilotPanel.resx">
+      <DependentUpon>AutoPilotPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\ApplicationExitAskForm.resx">
       <DependentUpon>ApplicationExitAskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquipmentSetupPanel.resx">
+      <DependentUpon>EquipmentSetupPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuPanel.resx">
+      <DependentUpon>MainMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OverViewPanel.resx">
       <DependentUpon>OverViewPanel.cs</DependentUpon>
@@ -102,10 +138,25 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Interface\NNR.CoPackageInspector.RT.Framework.Interface.csproj">
+      <Project>{D788EA2F-68AB-40C8-9B1D-78FD43B550D1}</Project>
+      <Name>NNR.CoPackageInspector.RT.Framework.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Model\NNR.CoPackageInspector.RT.Framework.Model.csproj">
+      <Project>{326C229A-BB48-4796-A5C2-F44EEBB0EE1C}</Project>
+      <Name>NNR.CoPackageInspector.RT.Framework.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NNR.CoPackageInspector.RT.MainApp.Interface\NNR.CoPackageInspector.RT.MainApp.Interface.csproj">
       <Project>{18ed2796-92e0-487c-bb20-7b69e130707f}</Project>
       <Name>NNR.CoPackageInspector.RT.MainApp.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NNR.Liblary.Utility\NNR.Liblary.Utility.csproj">
+      <Project>{e9a1ea66-8c5e-489e-b8ac-a702080f688b}</Project>
+      <Name>NNR.Liblary.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PowerOff.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

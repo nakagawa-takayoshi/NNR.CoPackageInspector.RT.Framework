@@ -1,5 +1,6 @@
 ﻿using NNR.CopackageInspector.RT.Framework.Model.AutoPilot;
 using NNR.CoPackageInspector.RT.Framework.Controller.Interface;
+using NNR.CoPakageInspector.RT.MainApp.Model.Station;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace NNR.CopackageInspector.RT.Framework.Controller.AutoPilot
 
         private EventHandler PreExecuteCompleted = delegate { };
 
+        
 
         /// <summary>
         /// コンストラクタ
