@@ -28,7 +28,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Model
         /// </summary>
         public TitleBarChildPolygon(Point startPoint, Point endPoint,int index)
         {
-            int widthMargin = 30;
+            int widthMargin = 20;
 
             BoarderPath.AddLine(new Point(startPoint.X, startPoint.Y),
                                 new Point((startPoint.X + widthMargin), (endPoint.Y / 2)));

@@ -81,8 +81,8 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
                 bool isTop = (ii == _captions.Max);
                 var titleBarItem = new TitleBarItem(g, caption, nextPoint, Size, FontSize, ii, isTop);
                 titleBarItem.Draw();
-
-                nextPoint = new Point((int)(nextPoint.X + titleBarItem.CaptionWidth + 30), ZeroTypes.IntZero);
+                int rightMargin = (ZeroTypes.IntZero == ii) ? ZeroTypes.IntZero : 30;
+                nextPoint = new Point((int)(nextPoint.X + titleBarItem.CaptionWidth + rightMargin), ZeroTypes.IntZero);
                 ii++;
             }
 

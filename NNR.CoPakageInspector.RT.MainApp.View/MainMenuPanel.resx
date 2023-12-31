@@ -122,7 +122,7 @@
     <value>Meiryo UI, 15.75pt, style=Bold</value>
   </data>
   <data name="_buttonOverView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 36</value>
+    <value>29, 56</value>
   </data>
   <data name="_buttonOverView.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 61</value>
@@ -144,13 +144,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_buttonOverView.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="_buttonAutoPilot.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 15.75pt, style=Bold</value>
   </data>
   <data name="_buttonAutoPilot.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 197</value>
+    <value>29, 217</value>
   </data>
   <data name="_buttonAutoPilot.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 61</value>
@@ -171,7 +171,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_buttonAutoPilot.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="_buttonEquipment.Font" type="System.Drawing.Font, System.Drawing">
     <value>Meiryo UI, 15.75pt, style=Bold</value>
@@ -181,7 +181,7 @@
     <value>NoControl</value>
   </data>
   <data name="_buttonEquipment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 117</value>
+    <value>29, 137</value>
   </data>
   <data name="_buttonEquipment.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 61</value>
@@ -202,6 +202,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_buttonEquipment.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="titleBar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="titleBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="titleBar1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="titleBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 40</value>
+  </data>
+  <data name="titleBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;titleBar1.Name" xml:space="preserve">
+    <value>titleBar1</value>
+  </data>
+  <data name="&gt;&gt;titleBar1.Type" xml:space="preserve">
+    <value>NNR.CoPakageInspector.RT.MainApp.View.TitleBar, NNR.CoPakageInspector.RT.MainApp.View, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;titleBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;titleBar1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

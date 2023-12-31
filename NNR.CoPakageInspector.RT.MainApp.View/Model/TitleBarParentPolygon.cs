@@ -26,7 +26,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Model
         /// </summary>
         public TitleBarParentPolygon(Point startPoint, Point endPoint, int index)
         {
-            int widthMargin = 30;
+            int widthMargin = 20;
 
             PolygonPath.AddPolygon(new Point[] {
                         new Point(startPoint.X,startPoint.Y),

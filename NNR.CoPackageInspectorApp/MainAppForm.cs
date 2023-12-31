@@ -53,6 +53,7 @@ namespace NNR.CoPackageInspectorApp
             var equipmentSetupPanel = new EquipmentSetupPanel() { Visible = false };
             mainAppModel.MainPanels.Add(equipmentSetupPanel);
 
+            _mainSplitContainer.Panel1.Controls.Clear();
             _mainSplitContainer.Panel1.Controls.Add(overViewPanel);
             _mainSplitContainer.Panel1.Controls.Add(autoPilotPanel);
             _mainSplitContainer.Panel1.Controls.Add(equipmentSetupPanel);

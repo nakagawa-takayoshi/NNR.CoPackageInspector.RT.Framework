@@ -32,6 +32,7 @@
             this._buttonOverView = new System.Windows.Forms.Button();
             this._buttonAutoPilot = new System.Windows.Forms.Button();
             this._buttonEquipment = new System.Windows.Forms.Button();
+            this.titleBar1 = new NNR.CoPakageInspector.RT.MainApp.View.TitleBar();
             this.SuspendLayout();
             // 
             // _buttonOverView
@@ -55,10 +56,18 @@
             this._buttonEquipment.UseVisualStyleBackColor = true;
             this._buttonEquipment.Click += new System.EventHandler(this._buttonEquipment_Click);
             // 
+            // titleBar1
+            // 
+            this.titleBar1.Captions = "Main";
+            resources.ApplyResources(this.titleBar1, "titleBar1");
+            this.titleBar1.FontSize = 14;
+            this.titleBar1.Name = "titleBar1";
+            // 
             // MainMenuPanel
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.titleBar1);
             this.Controls.Add(this._buttonEquipment);
             this.Controls.Add(this._buttonAutoPilot);
             this.Controls.Add(this._buttonOverView);
@@ -72,5 +81,6 @@
         private System.Windows.Forms.Button _buttonOverView;
         private System.Windows.Forms.Button _buttonAutoPilot;
         private System.Windows.Forms.Button _buttonEquipment;
+        private TitleBar titleBar1;
     }
 }

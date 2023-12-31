@@ -32,6 +32,8 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
             autoPilotMenu.Visible = false;
             mainAppModel.MenuPanels.Add(autoPilotMenu);
 
+            SuspendLayout();
+
             var panel = tableLayoutPanel1.GetControlFromPosition(0, 0);
             tableLayoutPanel1.Controls.Remove(panel);
 
@@ -40,6 +42,8 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
 
             var menuProvider = MenuPanelProvider.Create();
             menuProvider.SwitchToMenu(MenuPanelProvider.Menues.Main);
+
+            ResumeLayout();
 
             base.OnLoad(e);
         }

@@ -28,7 +28,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Model
 
         public TitleBarFirstPolygon(Point startPoint, Point endPoint, bool isTop)
         {
-            const int widthMargin = 30;
+            const int widthMargin = 20;
 
             BackGroundBrash = (isTop) ? Brushes.SkyBlue : Brushes.White;
 

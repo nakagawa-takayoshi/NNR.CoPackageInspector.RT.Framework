@@ -46,8 +46,9 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Model
             var font = new Font(@"Meiryo UI", fontSize, FontStyle.Bold);
             var stringSize = g.MeasureString(caption, font).ToSize();
             CaptionWidth = stringSize.Width;
-            _drawX = (index == 0) ? 0 : (startPoint.X + 30);
-            var endPoint = new Point((startPoint.X + stringSize.Width + 30), parentSize.Height);
+            _drawX = (index == 0) ? 0 : (startPoint.X + 20);
+            int rightMargin = (index == 0) ? 0 : 20;
+            var endPoint = new Point((startPoint.X + stringSize.Width + rightMargin), parentSize.Height);
 
             _button = new Button();
             _button.Visible = true;
