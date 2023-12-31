@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RoundRobin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RoundRobin.2.2.1\lib\netstandard2.0\RoundRobin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -43,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoPilotMenuCorePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AutoPilotMenuCorePanel.Designer.cs">
+      <DependentUpon>AutoPilotMenuCorePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoPilotMenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AutoPilotMenuPanel.Designer.cs">
+      <DependentUpon>AutoPilotMenuPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoPilotOperationPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AutoPilotOperationPanel.Designer.cs">
+      <DependentUpon>AutoPilotOperationPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="AutoPilotPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,6 +128,15 @@
     <Compile Include="Model\TitleBarItem.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AutoPilotMenuCorePanel.resx">
+      <DependentUpon>AutoPilotMenuCorePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoPilotMenuPanel.resx">
+      <DependentUpon>AutoPilotMenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoPilotOperationPanel.resx">
+      <DependentUpon>AutoPilotOperationPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AutoPilotPanel.resx">
       <DependentUpon>AutoPilotPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -150,12 +180,17 @@
       <Project>{18ed2796-92e0-487c-bb20-7b69e130707f}</Project>
       <Name>NNR.CoPackageInspector.RT.MainApp.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.Controller\NNR.CoPakageInspector.RT.MainApp.Controller.csproj">
+      <Project>{FC19C5E8-0CE8-4314-9FC3-A3C272867AE9}</Project>
+      <Name>NNR.CoPakageInspector.RT.MainApp.Controller</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NNR.Liblary.Utility\NNR.Liblary.Utility.csproj">
       <Project>{e9a1ea66-8c5e-489e-b8ac-a702080f688b}</Project>
       <Name>NNR.Liblary.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\PowerOff.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

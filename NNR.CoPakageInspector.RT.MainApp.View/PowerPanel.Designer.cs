@@ -36,10 +36,10 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
             // 
             this._buttonPowerOff.BackgroundImage = global::NNR.CoPakageInspector.RT.MainApp.View.Properties.Resources.PowerOff;
             this._buttonPowerOff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this._buttonPowerOff.Location = new System.Drawing.Point(186, 2);
+            this._buttonPowerOff.Location = new System.Drawing.Point(179, 5);
             this._buttonPowerOff.Margin = new System.Windows.Forms.Padding(2);
             this._buttonPowerOff.Name = "_buttonPowerOff";
-            this._buttonPowerOff.Size = new System.Drawing.Size(44, 44);
+            this._buttonPowerOff.Size = new System.Drawing.Size(50, 50);
             this._buttonPowerOff.TabIndex = 0;
             this._buttonPowerOff.UseVisualStyleBackColor = true;
             this._buttonPowerOff.Click += new System.EventHandler(this._buttonPowerOff_Click);
@@ -48,10 +48,11 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this._buttonPowerOff);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PowerPanel";
-            this.Size = new System.Drawing.Size(240, 49);
+            this.Size = new System.Drawing.Size(240, 61);
             this.ResumeLayout(false);
 
         }

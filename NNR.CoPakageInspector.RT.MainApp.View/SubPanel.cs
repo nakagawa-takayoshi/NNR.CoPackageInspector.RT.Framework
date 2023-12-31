@@ -1,4 +1,7 @@
-﻿using System;
+﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
+using NNR.CoPakageInspector.RT.MainApp.Controller.PanelsProvider;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +18,30 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
         public SubPanel()
         {
             InitializeComponent();
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            var mainAppModel = MainAppModelProvider.GetInstance();
+
+            var mainMenu = new MainMenuPanel();
+            mainMenu.Visible = false;
+            mainAppModel.MenuPanels.Add(mainMenu);
+
+            var autoPilotMenu = new AutoPilotMenuPanel();
+            autoPilotMenu.Visible = false;
+            mainAppModel.MenuPanels.Add(autoPilotMenu);
+
+            var panel = tableLayoutPanel1.GetControlFromPosition(0, 0);
+            tableLayoutPanel1.Controls.Remove(panel);
+
+            tableLayoutPanel1.Controls.Add(mainMenu, 0, 0);
+            tableLayoutPanel1.Controls.Add(autoPilotMenu, 0, 0);
+
+            var menuProvider = MenuPanelProvider.Create();
+            menuProvider.SwitchToMenu(MenuPanelProvider.Menues.Main);
+
+            base.OnLoad(e);
         }
     }
 }

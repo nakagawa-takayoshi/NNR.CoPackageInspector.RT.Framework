@@ -1,4 +1,5 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
+using NNR.CoPackageInspector.RT.MainApp.Interface.View;
 using NNR.CoPakageInspector.RT.MainApp.Model.Station;
 using NNR.CoPakageInspector.RT.MainApp.View.Properties;
 using System;
@@ -13,7 +14,7 @@ using System.Windows.Forms;
 
 namespace NNR.CoPakageInspector.RT.MainApp.View
 {
-    public partial class AutoPilotPanel : UserControl
+    public partial class AutoPilotPanel : UserControl, IAutoPilotPanel
     {
         private StationCollection _stations;
 

@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,7 +53,13 @@
     <Compile Include="Model\IApplicationCondition.cs" />
     <Compile Include="Model\IMainAppModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\IAutoPilotPanel.cs" />
+    <Compile Include="View\IEqupmentSetupPanel.cs" />
     <Compile Include="View\IMainAppForm.cs" />
+    <Compile Include="View\IMainPanel.cs" />
+    <Compile Include="View\IOverViewPanel.cs" />
+    <Compile Include="View\Menu\IAutoPilotMenu.cs" />
+    <Compile Include="View\Menu\IMainMenuPanel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Interface\NNR.CoPackageInspector.RT.Framework.Interface.csproj">

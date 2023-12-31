@@ -117,16 +117,75 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="tableLayoutPanel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="_buttonResetToOrigin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 15.75pt, style=Bold</value>
+  </data>
+  <data name="_buttonResetToOrigin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 15</value>
+  </data>
+  <data name="_buttonResetToOrigin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 52</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="_buttonResetToOrigin.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="_buttonResetToOrigin.Text" xml:space="preserve">
+    <value>原点復帰</value>
+  </data>
+  <data name="&gt;&gt;_buttonResetToOrigin.Name" xml:space="preserve">
+    <value>_buttonResetToOrigin</value>
+  </data>
+  <data name="&gt;&gt;_buttonResetToOrigin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_buttonResetToOrigin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_buttonResetToOrigin.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_buttonOperationStart.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Meiryo UI, 15.75pt, style=Bold</value>
+  </data>
+  <data name="_buttonOperationStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 104</value>
+  </data>
+  <data name="_buttonOperationStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 52</value>
+  </data>
+  <data name="_buttonOperationStart.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="_buttonOperationStart.Text" xml:space="preserve">
+    <value>運転開始</value>
+  </data>
+  <data name="&gt;&gt;_buttonOperationStart.Name" xml:space="preserve">
+    <value>_buttonOperationStart</value>
+  </data>
+  <data name="&gt;&gt;_buttonOperationStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_buttonOperationStart.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;_buttonOperationStart.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="autoPilotOperationPanel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="_titleBar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 12</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 641</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AutoPilotMenuCorePanel</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

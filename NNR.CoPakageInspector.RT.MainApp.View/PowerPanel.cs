@@ -1,5 +1,6 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
 using NNR.CoPakageInspector.RT.MainApp.View.Dialogs;
+using NNR.Liblary.Utility.Utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,5 +31,14 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
 
             mainContext.MainAppForm.Close();
         }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            var g = e.Graphics;
+            g.DrawLine(new Pen(Brushes.Black), new Point(ZeroTypes.IntZero, ZeroTypes.IntZero), new Point(Width, ZeroTypes.IntZero));
+
+            base.OnPaint(e);
+        }
+
     }
 }

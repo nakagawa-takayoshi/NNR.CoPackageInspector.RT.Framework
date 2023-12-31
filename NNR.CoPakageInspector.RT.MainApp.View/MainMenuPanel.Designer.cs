@@ -39,18 +39,21 @@
             resources.ApplyResources(this._buttonOverView, "_buttonOverView");
             this._buttonOverView.Name = "_buttonOverView";
             this._buttonOverView.UseVisualStyleBackColor = true;
+            this._buttonOverView.Click += new System.EventHandler(this._buttonOverView_Click);
             // 
             // _buttonAutoPilot
             // 
             resources.ApplyResources(this._buttonAutoPilot, "_buttonAutoPilot");
             this._buttonAutoPilot.Name = "_buttonAutoPilot";
             this._buttonAutoPilot.UseVisualStyleBackColor = true;
+            this._buttonAutoPilot.Click += new System.EventHandler(this._buttonAutoPilot_Click);
             // 
             // _buttonEquipment
             // 
             resources.ApplyResources(this._buttonEquipment, "_buttonEquipment");
             this._buttonEquipment.Name = "_buttonEquipment";
             this._buttonEquipment.UseVisualStyleBackColor = true;
+            this._buttonEquipment.Click += new System.EventHandler(this._buttonEquipment_Click);
             // 
             // MainMenuPanel
             // 

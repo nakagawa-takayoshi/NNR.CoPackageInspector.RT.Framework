@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NNR.CoPakageInspector.RT.MainApp.Model
 {
@@ -16,6 +17,10 @@ namespace NNR.CoPakageInspector.RT.MainApp.Model
         public IStationCollection Stations { get; set; }
 
         public IApplicationCondition AppCondition { get; }
+
+        public List<UserControl> MainPanels { get; } = new List<UserControl>();
+
+        public List<UserControl> MenuPanels { get; } = new List<UserControl>();
 
         public static IMainAppModelWriter Create()
         {
