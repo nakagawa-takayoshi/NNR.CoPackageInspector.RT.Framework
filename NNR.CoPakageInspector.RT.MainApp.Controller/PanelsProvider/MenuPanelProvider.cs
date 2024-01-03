@@ -16,6 +16,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.Controller.PanelsProvider
 
         public enum Menues
         {
+            OverView,
             Main,
             AutoPilot,
         }
@@ -37,6 +38,10 @@ namespace NNR.CoPakageInspector.RT.MainApp.Controller.PanelsProvider
                     item.Visible = true;
                 }
                 else if ((menu == Menues.AutoPilot) && (item is IAutoPilotMenu))
+                {
+                    item.Visible = true;
+                }
+                else if ((menu == Menues.OverView) && (item is IOverViewMenuPanel))
                 {
                     item.Visible = true;
                 }

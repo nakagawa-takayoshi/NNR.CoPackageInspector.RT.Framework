@@ -31,10 +31,16 @@ namespace NNR.CoPackageInspectorApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainAppForm));
             this._mainSplitContainer = new System.Windows.Forms.SplitContainer();
-            this.subPanel1 = new NNR.CoPakageInspector.RT.MainApp.View.SubPanel();
+            this._navigationSplitContainer = new System.Windows.Forms.SplitContainer();
+            this.navigationPanel1 = new NNR.CoPakageInspector.RT.MainApp.View.NavigationPanel();
+            this._subPanel = new NNR.CoPakageInspector.RT.MainApp.View.SubPanel();
             ((System.ComponentModel.ISupportInitialize)(this._mainSplitContainer)).BeginInit();
+            this._mainSplitContainer.Panel1.SuspendLayout();
             this._mainSplitContainer.Panel2.SuspendLayout();
             this._mainSplitContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._navigationSplitContainer)).BeginInit();
+            this._navigationSplitContainer.Panel2.SuspendLayout();
+            this._navigationSplitContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // _mainSplitContainer
@@ -43,15 +49,34 @@ namespace NNR.CoPackageInspectorApp
             this._mainSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this._mainSplitContainer.Name = "_mainSplitContainer";
             // 
+            // _mainSplitContainer.Panel1
+            // 
+            this._mainSplitContainer.Panel1.Controls.Add(this._navigationSplitContainer);
+            // 
             // _mainSplitContainer.Panel2
             // 
-            this._mainSplitContainer.Panel2.Controls.Add(this.subPanel1);
+            this._mainSplitContainer.Panel2.Controls.Add(this._subPanel);
             // 
-            // subPanel1
+            // _navigationSplitContainer
             // 
-            this.subPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.subPanel1, "subPanel1");
-            this.subPanel1.Name = "subPanel1";
+            resources.ApplyResources(this._navigationSplitContainer, "_navigationSplitContainer");
+            this._navigationSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this._navigationSplitContainer.Name = "_navigationSplitContainer";
+            // 
+            // _navigationSplitContainer.Panel2
+            // 
+            this._navigationSplitContainer.Panel2.Controls.Add(this.navigationPanel1);
+            // 
+            // navigationPanel1
+            // 
+            resources.ApplyResources(this.navigationPanel1, "navigationPanel1");
+            this.navigationPanel1.Name = "navigationPanel1";
+            // 
+            // _subPanel
+            // 
+            this._subPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this._subPanel, "_subPanel");
+            this._subPanel.Name = "_subPanel";
             // 
             // MainAppForm
             // 
@@ -62,9 +87,13 @@ namespace NNR.CoPackageInspectorApp
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainAppForm";
+            this._mainSplitContainer.Panel1.ResumeLayout(false);
             this._mainSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this._mainSplitContainer)).EndInit();
             this._mainSplitContainer.ResumeLayout(false);
+            this._navigationSplitContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._navigationSplitContainer)).EndInit();
+            this._navigationSplitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -72,7 +101,9 @@ namespace NNR.CoPackageInspectorApp
         #endregion
 
         private System.Windows.Forms.SplitContainer _mainSplitContainer;
-        private CoPakageInspector.RT.MainApp.View.SubPanel subPanel1;
+        private CoPakageInspector.RT.MainApp.View.SubPanel _subPanel;
+        private System.Windows.Forms.SplitContainer _navigationSplitContainer;
+        private CoPakageInspector.RT.MainApp.View.NavigationPanel navigationPanel1;
     }
 }
 

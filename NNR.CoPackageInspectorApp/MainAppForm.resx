@@ -128,6 +128,88 @@
   <data name="_mainSplitContainer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
+  <data name="_navigationSplitContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="_navigationSplitContainer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="_navigationSplitContainer.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Panel1.Name" xml:space="preserve">
+    <value>_navigationSplitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Panel1.Parent" xml:space="preserve">
+    <value>_navigationSplitContainer</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="navigationPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="navigationPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="navigationPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1046, 66</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="navigationPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;navigationPanel1.Name" xml:space="preserve">
+    <value>navigationPanel1</value>
+  </data>
+  <data name="&gt;&gt;navigationPanel1.Type" xml:space="preserve">
+    <value>NNR.CoPakageInspector.RT.MainApp.View.NavigationPanel, NNR.CoPakageInspector.RT.MainApp.View, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;navigationPanel1.Parent" xml:space="preserve">
+    <value>_navigationSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;navigationPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Panel2.Name" xml:space="preserve">
+    <value>_navigationSplitContainer.Panel2</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Panel2.Parent" xml:space="preserve">
+    <value>_navigationSplitContainer</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="_navigationSplitContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1046, 760</value>
+  </data>
+  <data name="_navigationSplitContainer.SplitterDistance" type="System.Int32, mscorlib">
+    <value>693</value>
+  </data>
+  <data name="_navigationSplitContainer.SplitterWidth" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="_navigationSplitContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Name" xml:space="preserve">
+    <value>_navigationSplitContainer</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.Parent" xml:space="preserve">
+    <value>_mainSplitContainer.Panel1</value>
+  </data>
+  <data name="&gt;&gt;_navigationSplitContainer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;_mainSplitContainer.Panel1.Name" xml:space="preserve">
     <value>_mainSplitContainer.Panel1</value>
   </data>
@@ -140,32 +222,31 @@
   <data name="&gt;&gt;_mainSplitContainer.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="subPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="_subPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="subPanel1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="_subPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="subPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="_subPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
   </data>
-  <data name="subPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 760</value>
+  <data name="_subPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 760</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="subPanel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="_subPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;subPanel1.Name" xml:space="preserve">
-    <value>subPanel1</value>
+  <data name="&gt;&gt;_subPanel.Name" xml:space="preserve">
+    <value>_subPanel</value>
   </data>
-  <data name="&gt;&gt;subPanel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;_subPanel.Type" xml:space="preserve">
     <value>NNR.CoPakageInspector.RT.MainApp.View.SubPanel, NNR.CoPakageInspector.RT.MainApp.View, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;subPanel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;_subPanel.Parent" xml:space="preserve">
     <value>_mainSplitContainer.Panel2</value>
   </data>
-  <data name="&gt;&gt;subPanel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;_subPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;_mainSplitContainer.Panel2.Name" xml:space="preserve">
@@ -184,7 +265,7 @@
     <value>1280, 760</value>
   </data>
   <data name="_mainSplitContainer.SplitterDistance" type="System.Int32, mscorlib">
-    <value>1042</value>
+    <value>1046</value>
   </data>
   <data name="_mainSplitContainer.SplitterWidth" type="System.Int32, mscorlib">
     <value>1</value>

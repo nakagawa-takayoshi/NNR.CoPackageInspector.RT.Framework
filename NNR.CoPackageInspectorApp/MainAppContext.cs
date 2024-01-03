@@ -18,6 +18,8 @@ namespace NNR.CoPackageInspectorApp
 
         public IMainAppModel MainAppModel { get; set; }
 
+        public IMainAppControllers MainAppControlers { get; set; }
+
         public SynchronizationContext MainAppSyncchronizationContext => _mainAppSynchronizationContext;
 
 

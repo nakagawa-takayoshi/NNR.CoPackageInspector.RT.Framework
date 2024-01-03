@@ -1,4 +1,5 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
+using NNR.CoPakageInspector.RT.MainApp.Controller.Factory;
 using NNR.CoPakageInspector.RT.MainApp.Model.Factory;
 using NNR.CoPakageInspector.RT.MainApp.Model.Station;
 using System;
@@ -36,6 +37,9 @@ namespace NNR.CoPackageInspector.MainApp.Runner
             // MainAppModel生成
             CreateMainAppModel();
 
+            // MainAppControllers生成
+            CreateMainAppControllers();
+
             var mainAppContext = MainAppContextProvider.GetInstance();
 
             if (!(mainAppContext.MainAppForm is Form mainAppForm)) return;
@@ -70,5 +74,13 @@ namespace NNR.CoPackageInspector.MainApp.Runner
             mainAppContextInitializer.MainAppModel = mainAppModelFactory.Create();
         }
 
+
+        private void CreateMainAppControllers()
+        {
+            var mainAppContext = MainAppContextProvider.GetInstance();
+            var mainAppContextInitializer = MainAppContextInitializer.Create(mainAppContext);
+
+            mainAppContextInitializer.MainAppControllers = MainAppControllersFactory.Create();
+        }
     }
 }

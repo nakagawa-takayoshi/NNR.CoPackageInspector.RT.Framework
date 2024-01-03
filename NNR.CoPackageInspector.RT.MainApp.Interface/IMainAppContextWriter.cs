@@ -11,6 +11,8 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface
     public interface IMainAppContextWriter
     {
 
-       IMainAppModel MainAppModel { set; }
+        IMainAppModel MainAppModel { set; }
+
+        IMainAppControllers MainAppControllers { set; }
     }
 }

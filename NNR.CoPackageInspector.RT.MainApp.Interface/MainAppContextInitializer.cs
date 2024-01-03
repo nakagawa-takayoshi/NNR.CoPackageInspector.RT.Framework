@@ -13,6 +13,8 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface
 
         public IMainAppModel MainAppModel { set => _mainAppContext.MainAppModel = value; }
 
+        public IMainAppControllers MainAppControllers { set => _mainAppContext.MainAppControllers = value; }
+
         public static MainAppContextInitializer Create(IMainAppContext mainAppContext)
         {
             return new MainAppContextInitializer(mainAppContext);

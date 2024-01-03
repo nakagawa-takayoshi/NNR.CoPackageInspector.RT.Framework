@@ -13,5 +13,7 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface
         IMainAppForm MainAppForm { get; }
 
         IMainAppModel MainAppModel { get;}
+
+        IMainAppControllers MainAppControlers { get; }
     }
 }

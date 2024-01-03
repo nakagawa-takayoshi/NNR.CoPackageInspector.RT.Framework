@@ -42,12 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ExclutionTransitions\IAutoPilotTransition.cs" />
+    <Compile Include="Controller\IExcplutionController.cs" />
     <Compile Include="IMainAppContext.cs" />
     <Compile Include="IMainAppContextWriter.cs" />
+    <Compile Include="IMainAppControllers.cs" />
     <Compile Include="IMainAppSynchronizationContext.cs" />
     <Compile Include="MainAppContextInitializer.cs" />
     <Compile Include="MainAppContextProviderFactory.cs" />
     <Compile Include="MainAppContextProvider.cs" />
+    <Compile Include="MainAppControlersProvider.cs" />
     <Compile Include="MainAppModelProvider.cs" />
     <Compile Include="Model\Enums\ApplicationConditionState.cs" />
     <Compile Include="Model\IApplicationCondition.cs" />
@@ -60,6 +64,7 @@
     <Compile Include="View\IOverViewPanel.cs" />
     <Compile Include="View\Menu\IAutoPilotMenu.cs" />
     <Compile Include="View\Menu\IMainMenuPanel.cs" />
+    <Compile Include="View\Menu\IOverViewMenuPanel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Interface\NNR.CoPackageInspector.RT.Framework.Interface.csproj">
