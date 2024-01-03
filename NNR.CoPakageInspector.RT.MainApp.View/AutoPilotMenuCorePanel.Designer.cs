@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AutoPilotMenuCorePanel));
             this._buttonResetToOrigin = new System.Windows.Forms.Button();
             this._buttonOperationStart = new System.Windows.Forms.Button();
+            this._buttonOperationStop = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _buttonResetToOrigin
@@ -45,10 +47,28 @@
             this._buttonOperationStart.Name = "_buttonOperationStart";
             this._buttonOperationStart.UseVisualStyleBackColor = true;
             // 
+            // _buttonOperationStop
+            // 
+            this._buttonOperationStop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this._buttonOperationStop, "_buttonOperationStop");
+            this._buttonOperationStop.ForeColor = System.Drawing.Color.Gainsboro;
+            this._buttonOperationStop.Name = "_buttonOperationStop";
+            this._buttonOperationStop.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // AutoPilotMenuCorePanel
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this._buttonOperationStop);
             this.Controls.Add(this._buttonOperationStart);
             this.Controls.Add(this._buttonResetToOrigin);
             this.Name = "AutoPilotMenuCorePanel";
@@ -60,5 +80,7 @@
 
         private System.Windows.Forms.Button _buttonResetToOrigin;
         private System.Windows.Forms.Button _buttonOperationStart;
+        private System.Windows.Forms.Button _buttonOperationStop;
+        private System.Windows.Forms.Button button1;
     }
 }

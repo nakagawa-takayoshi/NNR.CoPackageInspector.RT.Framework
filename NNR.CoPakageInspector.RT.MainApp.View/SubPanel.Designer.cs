@@ -31,7 +31,6 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.powerPanel1 = new NNR.CoPakageInspector.RT.MainApp.View.PowerPanel();
-            this.mainMenuPanel1 = new NNR.CoPakageInspector.RT.MainApp.View.MainMenuPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,14 +41,13 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 12F));
             this.tableLayoutPanel1.Controls.Add(this.powerPanel1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.mainMenuPanel1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.48021F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.519789F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.55672F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.443272F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(238, 758);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -57,19 +55,11 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
             // 
             this.powerPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.powerPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.powerPanel1.Location = new System.Drawing.Point(1, 702);
+            this.powerPanel1.Location = new System.Drawing.Point(1, 695);
             this.powerPanel1.Margin = new System.Windows.Forms.Padding(1);
             this.powerPanel1.Name = "powerPanel1";
-            this.powerPanel1.Size = new System.Drawing.Size(236, 55);
+            this.powerPanel1.Size = new System.Drawing.Size(236, 62);
             this.powerPanel1.TabIndex = 0;
-            // 
-            // mainMenuPanel1
-            // 
-            this.mainMenuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainMenuPanel1.Location = new System.Drawing.Point(3, 3);
-            this.mainMenuPanel1.Name = "mainMenuPanel1";
-            this.mainMenuPanel1.Size = new System.Drawing.Size(232, 695);
-            this.mainMenuPanel1.TabIndex = 1;
             // 
             // SubPanel
             // 
@@ -89,6 +79,5 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private PowerPanel powerPanel1;
-        private MainMenuPanel mainMenuPanel1;
     }
 }

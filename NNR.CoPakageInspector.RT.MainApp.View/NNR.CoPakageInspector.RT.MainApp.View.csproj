@@ -106,6 +106,18 @@
     <Compile Include="Model\TitleBarChildPolygon.cs" />
     <Compile Include="Model\TitleBarFirstPolygon.cs" />
     <Compile Include="Model\TitleBarParentPolygon.cs" />
+    <Compile Include="NavigationPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationPanel.Designer.cs">
+      <DependentUpon>NavigationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OverViewMenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OverViewMenuPanel.Designer.cs">
+      <DependentUpon>OverViewMenuPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="OverViewPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +172,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuPanel.resx">
       <DependentUpon>MainMenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationPanel.resx">
+      <DependentUpon>NavigationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverViewMenuPanel.resx">
+      <DependentUpon>OverViewMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OverViewPanel.resx">
       <DependentUpon>OverViewPanel.cs</DependentUpon>

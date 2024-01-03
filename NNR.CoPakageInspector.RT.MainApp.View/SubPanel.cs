@@ -22,7 +22,13 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
 
         protected override void OnLoad(EventArgs e)
         {
+            if (base.DesignMode) return;
+
             var mainAppModel = MainAppModelProvider.GetInstance();
+
+            var ovweViewPanel = new OverViewMenuPanel();
+            ovweViewPanel.Visible = false;
+            mainAppModel.MenuPanels.Add(ovweViewPanel);
 
             var mainMenu = new MainMenuPanel();
             mainMenu.Visible = false;
@@ -32,16 +38,15 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
             autoPilotMenu.Visible = false;
             mainAppModel.MenuPanels.Add(autoPilotMenu);
 
-            SuspendLayout();
 
-            var panel = tableLayoutPanel1.GetControlFromPosition(0, 0);
-            tableLayoutPanel1.Controls.Remove(panel);
+            SuspendLayout();
 
             tableLayoutPanel1.Controls.Add(mainMenu, 0, 0);
             tableLayoutPanel1.Controls.Add(autoPilotMenu, 0, 0);
+            tableLayoutPanel1.Controls.Add(ovweViewPanel, 0 ,0);
 
             var menuProvider = MenuPanelProvider.Create();
-            menuProvider.SwitchToMenu(MenuPanelProvider.Menues.Main);
+            menuProvider.SwitchToMenu(MenuPanelProvider.Menues.OverView);
 
             ResumeLayout();
 

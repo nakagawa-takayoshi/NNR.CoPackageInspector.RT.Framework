@@ -39,7 +39,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
             this._buttonPowerOff.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this._buttonPowerOff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this._buttonPowerOff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this._buttonPowerOff.Location = new System.Drawing.Point(179, 5);
+            this._buttonPowerOff.Location = new System.Drawing.Point(173, 5);
             this._buttonPowerOff.Margin = new System.Windows.Forms.Padding(2);
             this._buttonPowerOff.Name = "_buttonPowerOff";
             this._buttonPowerOff.Size = new System.Drawing.Size(50, 50);
