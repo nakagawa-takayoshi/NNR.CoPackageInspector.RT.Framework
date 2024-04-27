@@ -72,5 +72,6 @@
       <Name>NNR.CoPackageInspector.RT.Framework.Interface</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
