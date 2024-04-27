@@ -41,8 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Maybe\IMaybe.cs" />
-    <Compile Include="Maybe\Maybe.cs" />
+    <Compile Include="Misc\IMaybe.cs" />
+    <Compile Include="Misc\Maybe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\ZeroTypes.cs" />
   </ItemGroup>

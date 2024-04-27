@@ -93,6 +93,12 @@
     <Compile Include="EquipmentSetupPanel.Designer.cs">
       <DependentUpon>EquipmentSetupPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="EqupmentSetupMenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EqupmentSetupMenuPanel.Designer.cs">
+      <DependentUpon>EqupmentSetupMenuPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ITitleBarItem.cs" />
     <Compile Include="MainMenuPanel.cs">
       <SubType>UserControl</SubType>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EquipmentSetupPanel.resx">
       <DependentUpon>EquipmentSetupPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EqupmentSetupMenuPanel.resx">
+      <DependentUpon>EqupmentSetupMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuPanel.resx">
       <DependentUpon>MainMenuPanel.cs</DependentUpon>

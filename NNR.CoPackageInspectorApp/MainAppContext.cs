@@ -1,6 +1,7 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
 using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View;
+using NNR.Liblary.Utility.Misc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,16 +15,24 @@ namespace NNR.CoPackageInspectorApp
         private IMainAppForm _mainAppForm;
         private SynchronizationContext _mainAppSynchronizationContext;
 
+        private IMaybe<IMainAppModel> _mainAppModelContainer = Maybe.Empty<IMainAppModel>();
+
+        private IMaybe<IMainAppControllers> _mainAppControllersContainer = Maybe.Empty<IMainAppControllers>();
+
         public IMainAppForm MainAppForm => _mainAppForm;
 
-        public IMainAppModel MainAppModel { get; set; }
+        public IMainAppModel MainAppModel {
+            get =>  _mainAppModelContainer.Object;
+            set => _mainAppModelContainer = Maybe.Create(value);
+        }
 
-        public IMainAppControllers MainAppControlers { get; set; }
+        public IMainAppControllers MainAppControllers
+        {
+            get => _mainAppControllersContainer.Object;
+            set => _mainAppControllersContainer = Maybe.Create(value);
+        }
 
         public SynchronizationContext MainAppSyncchronizationContext => _mainAppSynchronizationContext;
-
-
-        //public IHardwareModel hardwareModel => throw new NotImplementedException();
 
 
         /// <summary>

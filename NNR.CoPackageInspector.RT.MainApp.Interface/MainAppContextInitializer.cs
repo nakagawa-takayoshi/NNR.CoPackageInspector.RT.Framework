@@ -21,7 +21,7 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface
         }
 
         public MainAppContextInitializer(IMainAppContext mainAppContext) 
-        { 
+        {
             if (!(mainAppContext is IMainAppContextWriter writer)) throw new OperationCanceledException();
 
             _mainAppContext = writer;

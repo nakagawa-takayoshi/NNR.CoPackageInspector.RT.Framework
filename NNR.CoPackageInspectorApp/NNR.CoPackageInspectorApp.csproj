@@ -101,6 +101,10 @@
       <Project>{736AE4AC-6885-4D1A-BDAC-2CCA8A72376B}</Project>
       <Name>NNR.CoPakageInspector.RT.MainApp.View</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NNR.Liblary.Utility\NNR.Liblary.Utility.csproj">
+      <Project>{E9A1EA66-8C5E-489E-B8AC-A702080F688B}</Project>
+      <Name>NNR.Liblary.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

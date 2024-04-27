@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
-namespace NNR.Liblary.Utility.Maybe
+namespace NNR.Liblary.Utility.Misc
 {
     public class Maybe
     {
@@ -18,6 +19,10 @@ namespace NNR.Liblary.Utility.Maybe
                 get { throw new InvalidOperationException(@"このオブジェクトは空オブジェクトです"); }
             }
 
+            public void Run(Action<T> action)
+            {
+                throw new InvalidOperationException(@"このオブジェクトは空オブジェクトです");
+            }
         }
 
 
@@ -33,6 +38,11 @@ namespace NNR.Liblary.Utility.Maybe
             public bool HasObject => true;
 
             public T Object => _object;
+
+            public void Run(Action<T> action)
+            {
+                action(_object);
+            }
         }
 
 

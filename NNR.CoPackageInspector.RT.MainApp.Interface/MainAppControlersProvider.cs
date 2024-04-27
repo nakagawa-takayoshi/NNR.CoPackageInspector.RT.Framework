@@ -17,7 +17,7 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface
         public static IMainAppControllers GetInstance()
         {
             var mainAppContextProvider = MainAppContextProvider.GetInstance();
-            return mainAppContextProvider.MainAppControlers;
+            return mainAppContextProvider.MainAppControllers;
         }
     }
 }

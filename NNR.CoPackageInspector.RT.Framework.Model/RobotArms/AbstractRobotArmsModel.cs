@@ -1,5 +1,5 @@
 ﻿using NNR.CoPackageInspector.RT.Framework.Interface.Model;
-using NNR.Liblary.Utility.Maybe;
+using NNR.Liblary.Utility.Misc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
