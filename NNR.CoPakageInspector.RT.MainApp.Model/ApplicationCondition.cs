@@ -1,5 +1,6 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
 using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Event;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,10 @@ using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Model
+namespace NNR.CoPackageInspector.RT.MainApp.Model
 {
     public class ApplicationCondition : IApplicationCondition, IDisposable
     {
-
 
         #region 内部メモリ
 
@@ -27,17 +27,13 @@ namespace NNR.CoPakageInspector.RT.MainApp.Model
         /// <summary>
         /// コンディション状態のプロパティ
         /// </summary>
-        public ApplicationConditionState State
-        {
-            get => _applicationConditionState;
-            set =>  OnConditionChange(new ApplicationConditionChangeEventArgs(value));
-        }
+        public ApplicationConditionState State => _applicationConditionState;
 
         #endregion
 
         #region イベントハンドラ
 
-        private event EventHandler<ApplicationConditionChangeEventArgs> ConditionChange;
+        public event EventHandler<ApplicationConditionChangeEventArgs> ConditionChanged;
 
         #endregion
 
@@ -47,7 +43,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.Model
         /// </summary>
         public ApplicationCondition()
         {
-            State = ApplicationConditionState.Startup;
+            _applicationConditionState = ApplicationConditionState.Startup;
         }
 
 
@@ -60,10 +56,11 @@ namespace NNR.CoPakageInspector.RT.MainApp.Model
         {
             _applicationConditionState = e.Condition;
 
-            ConditionChange?.Invoke(this, e);
+            ConditionChanged?.Invoke(this, e);
         }
 
         #endregion
+
 
         #region メソッド
 
@@ -72,8 +69,8 @@ namespace NNR.CoPakageInspector.RT.MainApp.Model
         {
             return Observable.FromEvent<EventHandler<ApplicationConditionChangeEventArgs>, ApplicationConditionChangeEventArgs>(
                     h => (s, e) => h(e),
-                    h => ConditionChange += h,
-                    h => ConditionChange -= h
+                    h => ConditionChanged += h,
+                    h => ConditionChanged -= h
                     ).Subscribe(handler);
         }
 

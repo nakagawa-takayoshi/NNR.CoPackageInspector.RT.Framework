@@ -1,6 +1,6 @@
 ﻿using NNR.CopackageInspector.RT.Framework.Model.AutoPilot;
 using NNR.CoPackageInspector.RT.Framework.Controller.Interface;
-using NNR.CoPakageInspector.RT.MainApp.Model.Station;
+using NNR.CoPackageInspector.RT.MainApp.Model.Station;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;

@@ -1,6 +1,6 @@
-﻿using NNR.CoPackageInspector.RT.Framework.Model.Station;
-using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
+﻿using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
+using NNR.CoPackageInspector.RT.MainApp.Model.Station;
 using System;
 using System.Collections.Generic;
 using System.Linq;

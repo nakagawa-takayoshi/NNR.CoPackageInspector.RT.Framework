@@ -1,6 +1,6 @@
 ﻿using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
-using NNR.CoPakageInspector.RT.MainApp.Model.Station;
+using NNR.CoPackageInspector.RT.MainApp.Model.Station;
 using RoundRobin;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,5 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Event;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface.Model
 {
     public interface IApplicationCondition
     {
-        ApplicationConditionState State { get; set; }
+        ApplicationConditionState State { get; }
+
+        event EventHandler<ApplicationConditionChangeEventArgs> ConditionChanged;
     }
 }

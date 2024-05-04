@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Model
+namespace NNR.CoPackageInspector.RT.MainApp.Interface.Model.Event
 {
     public class ApplicationConditionChangeEventArgs : EventArgs
     {

@@ -1,5 +1,4 @@
-﻿using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
-using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
+﻿using NNR.CoPakageInspector.RT.MainApp.Model.Station;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Model.Station
+namespace NNR.CoPackageInspector.RT.MainApp.Model.Station
 {
     public class StationCollectionAbstractFactory
     {

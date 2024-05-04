@@ -20,6 +20,9 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface
             return new MainAppContextInitializer(mainAppContext);
         }
 
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         public MainAppContextInitializer(IMainAppContext mainAppContext) 
         {
             if (!(mainAppContext is IMainAppContextWriter writer)) throw new OperationCanceledException();

@@ -54,6 +54,7 @@
     <Compile Include="MainAppControlersProvider.cs" />
     <Compile Include="MainAppModelProvider.cs" />
     <Compile Include="Model\Enums\ApplicationConditionState.cs" />
+    <Compile Include="Model\Event\ApplicationConditionChangeEventArgs.cs" />
     <Compile Include="Model\IApplicationCondition.cs" />
     <Compile Include="Model\IMainAppModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

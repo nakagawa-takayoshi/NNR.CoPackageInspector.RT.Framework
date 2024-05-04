@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Model.Station
+namespace NNR.CoPackageInspector.RT.MainApp.Model.Station
 {
     public class StationFunctionCollection
     {
