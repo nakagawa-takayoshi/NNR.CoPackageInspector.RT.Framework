@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NNR.CopackageInspector.RT.Framework.Model.Workpiece
+namespace NNR.CoPackageInspector.RT.Framework.Model.Workpiece
 {
     public class WorkpieceSize :IWorkpieceSize
     {

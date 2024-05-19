@@ -89,13 +89,13 @@
       <Project>{18ed2796-92e0-487c-bb20-7b69e130707f}</Project>
       <Name>NNR.CoPackageInspector.RT.MainApp.Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.Controller\NNR.CoPakageInspector.RT.MainApp.Controller.csproj">
+    <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.Controller\NNR.CoPackageInspector.RT.MainApp.Controller.csproj">
       <Project>{FC19C5E8-0CE8-4314-9FC3-A3C272867AE9}</Project>
-      <Name>NNR.CoPakageInspector.RT.MainApp.Controller</Name>
+      <Name>NNR.CoPackageInspector.RT.MainApp.Controller</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.Model\NNR.CoPakageInspector.RT.MainApp.Model.csproj">
+    <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.Model\NNR.CoPackageInspector.RT.MainApp.Model.csproj">
       <Project>{0db18b88-59cb-43aa-ac96-86c33ea2bfbb}</Project>
-      <Name>NNR.CoPakageInspector.RT.MainApp.Model</Name>
+      <Name>NNR.CoPackageInspector.RT.MainApp.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.View\NNR.CoPakageInspector.RT.MainApp.View.csproj">
       <Project>{736AE4AC-6885-4D1A-BDAC-2CCA8A72376B}</Project>

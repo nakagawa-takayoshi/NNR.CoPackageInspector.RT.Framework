@@ -70,6 +70,7 @@
     <Compile Include="Station\StationFunction.cs" />
     <Compile Include="Station\StationFunctionCollection.cs" />
     <Compile Include="Station\StationFunctionQueue.cs" />
+    <Compile Include="Workpiece\WorkpieceTypeModel.cs" />
     <Compile Include="Workpiece\WorkpieceModel.cs" />
     <Compile Include="Workpiece\WorkpieceSize.cs" />
   </ItemGroup>

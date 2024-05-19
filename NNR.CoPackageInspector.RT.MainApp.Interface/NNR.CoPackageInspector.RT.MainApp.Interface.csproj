@@ -63,6 +63,7 @@
     <Compile Include="View\IMainAppForm.cs" />
     <Compile Include="View\IMainPanel.cs" />
     <Compile Include="View\IOverViewPanel.cs" />
+    <Compile Include="View\IWorkpieceSettingPanel.cs" />
     <Compile Include="View\Menu\IAutoPilotMenu.cs" />
     <Compile Include="View\Menu\IMainMenuPanel.cs" />
     <Compile Include="View\Menu\IOverViewMenuPanel.cs" />

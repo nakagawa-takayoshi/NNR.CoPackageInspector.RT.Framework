@@ -45,6 +45,7 @@
             resources.ApplyResources(this._buttonWorkSetup, "_buttonWorkSetup");
             this._buttonWorkSetup.Name = "_buttonWorkSetup";
             this._buttonWorkSetup.UseVisualStyleBackColor = true;
+            this._buttonWorkSetup.Click += new System.EventHandler(this._buttonWorkSetup_Click);
             // 
             // EquipmentSetupPanel
             // 

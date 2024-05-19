@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Controller.PanelsProvider
+namespace NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider
 {
     public class MenuPanelProvider
     {

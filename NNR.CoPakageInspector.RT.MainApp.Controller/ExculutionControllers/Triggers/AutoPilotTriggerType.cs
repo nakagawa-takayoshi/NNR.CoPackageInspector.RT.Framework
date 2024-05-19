@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Controller.ExculutionControllers.Triggers
+namespace NNR.CoPackageInspector.RT.MainApp.Controller.ExculutionControllers.Triggers
 {
     public enum AutoPilotTriggerType
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{0DB18B88-59CB-43AA-AC96-86C33EA2BFBB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NNR.CoPakageInspector.RT.MainApp.Model</RootNamespace>
-    <AssemblyName>NNR.CoPakageInspector.RT.MainApp.Model</AssemblyName>
+    <RootNamespace>NNR.CoPackageInspector.RT.MainApp.Model</RootNamespace>
+    <AssemblyName>NNR.CoPackageInspector.RT.MainApp.Model</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

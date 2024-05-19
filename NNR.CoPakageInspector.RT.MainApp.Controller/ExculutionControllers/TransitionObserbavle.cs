@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Controller.ExculutionControllers
+namespace NNR.CoPackageInspector.RT.MainApp.Controller.ExculutionControllers
 {
     public static class TransitionObserbavle
     {

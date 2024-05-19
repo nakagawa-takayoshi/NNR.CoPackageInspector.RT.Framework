@@ -2,14 +2,14 @@
 using NNR.CopackageInspector.RT.Framework.Model.AutoPilot;
 using NNR.CoPackageInspector.RT.Framework.Controller.Interface;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
-using NNR.CoPakageInspector.RT.MainApp.Model.Station;
+using NNR.CoPackageInspector.RT.MainApp.Model.Station;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Controller.AutoPilot
+namespace NNR.CoPackageInspector.RT.MainApp.Controller.AutoPilot
 {
     public class AutoPilotPortInObserver : AbstractAutoPilotPortInObserver
     {

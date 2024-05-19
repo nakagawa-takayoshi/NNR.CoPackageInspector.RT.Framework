@@ -1,9 +1,9 @@
-﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
-using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
+﻿using NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider;
+using NNR.CoPackageInspector.RT.MainApp.Interface;
 using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View;
-using NNR.CoPakageInspector.RT.MainApp.Controller.PanelsProvider;
 using NNR.CoPakageInspector.RT.MainApp.View;
+using NNR.CoPcakageInspector.RT.MainApp.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -52,11 +52,14 @@ namespace NNR.CoPackageInspectorApp
 
             var equipmentSetupPanel = new EquipmentSetupPanel() { Visible = false };
             mainAppModel.MainPanels.Add(equipmentSetupPanel);
+            var workpieceSettingPanel = new WorkpieceSettingPanel() { Visible = false };
+            mainAppModel.MainPanels.Add(workpieceSettingPanel);
 
             _navigationSplitContainer.Panel1.Controls.Clear();
             _navigationSplitContainer.Panel1.Controls.Add(overViewPanel);
             _navigationSplitContainer.Panel1.Controls.Add(autoPilotPanel);
             _navigationSplitContainer.Panel1.Controls.Add(equipmentSetupPanel);
+            _navigationSplitContainer.Panel1.Controls.Add(workpieceSettingPanel);
 
             var panelProvider = MainPanelsProvider.Create();
             panelProvider.SwitchToPanel(MainPanelsProvider.Panel.OverView);
@@ -68,8 +71,11 @@ namespace NNR.CoPackageInspectorApp
 
             _mainSplitContainer.IsSplitterFixed = true;
 
-            mainAppModel.AppCondition.State = ApplicationConditionState.Running;
-
+            if (!base.DesignMode)
+            {
+                var applicationConditionController = ApplicationConditionController.Create(mainAppModel.AppCondition);
+                applicationConditionController.Update(ApplicationConditionState.Running);
+            }
         }
 
         /// <summary>
@@ -78,9 +84,11 @@ namespace NNR.CoPackageInspectorApp
         protected override void OnClosed(EventArgs e)
         {
             var mainAppModel = MainAppModelProvider.GetInstance();
-            mainAppModel.AppCondition.State = ApplicationConditionState.Exit;
-            
+            var applicationConditionController = ApplicationConditionController.Create(mainAppModel.AppCondition);
+            applicationConditionController.Update(ApplicationConditionState.Exit);
+
             base.OnClosed(e);
         }
     }
 }
+

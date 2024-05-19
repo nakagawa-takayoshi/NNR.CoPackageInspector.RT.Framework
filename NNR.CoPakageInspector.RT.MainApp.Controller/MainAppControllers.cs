@@ -6,7 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Controller
+namespace NNR.CoPackageInspector.RT.MainApp.Controller
 {
     internal class MainAppControllers : IMainAppControllers
     {

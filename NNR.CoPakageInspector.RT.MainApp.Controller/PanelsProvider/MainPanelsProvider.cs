@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Controller.PanelsProvider
+namespace NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider
 {
     public class MainPanelsProvider
     {
@@ -18,6 +18,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.Controller.PanelsProvider
             OverView,
             AutoPilot,
             Equuipment,
+            WorkpieceSetting
         };
 
         public static MainPanelsProvider Create()
@@ -45,6 +46,10 @@ namespace NNR.CoPakageInspector.RT.MainApp.Controller.PanelsProvider
                     item.Visible = true;
                 }
                 else if ((panel == Panel.Equuipment) && (item is IEqupmentSetupPanel))
+                {
+                    item.Visible = true;
+                }
+                else if ((panel == Panel.WorkpieceSetting) && (item is IWorkpieceSettingPanel))
                 {
                     item.Visible = true;
                 }

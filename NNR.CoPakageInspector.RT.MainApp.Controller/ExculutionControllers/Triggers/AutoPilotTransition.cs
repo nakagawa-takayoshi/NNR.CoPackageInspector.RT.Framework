@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Controller.ExculutionControllers.Triggers
+namespace NNR.CoPackageInspector.RT.MainApp.Controller.ExculutionControllers.Triggers
 {
     public class AutoPilotTransition : IAutoPilotTransition
     {

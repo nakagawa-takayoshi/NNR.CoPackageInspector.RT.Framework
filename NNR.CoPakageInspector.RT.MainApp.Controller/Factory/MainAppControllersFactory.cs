@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NNR.CoPakageInspector.RT.MainApp.Controller.Factory
+namespace NNR.CoPackageInspector.RT.MainApp.Controller.Factory
 {
     public static class MainAppControllersFactory
     {

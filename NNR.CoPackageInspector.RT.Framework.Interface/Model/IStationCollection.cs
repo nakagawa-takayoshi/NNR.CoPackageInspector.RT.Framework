@@ -11,5 +11,10 @@ namespace NNR.CoPackageInspector.RT.Framework.Interface.Model
         IStationItem PortInStation { get; }
 
         void ResetToOrigin();
+
+        /// <summary>
+        /// 機能をローテート
+        /// </summary>
+        void RoateFunction();
     }
 }

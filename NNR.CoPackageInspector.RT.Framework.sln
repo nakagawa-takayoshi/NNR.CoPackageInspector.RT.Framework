@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CopackageInspector.RT.F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.RT.Framework.Model", "NNR.CoPackageInspector.RT.Framework.Model\NNR.CoPackageInspector.RT.Framework.Model.csproj", "{326C229A-BB48-4796-A5C2-F44EEBB0EE1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPakageInspector.RT.MainApp.Model", "NNR.CoPakageInspector.RT.MainApp.Model\NNR.CoPakageInspector.RT.MainApp.Model.csproj", "{0DB18B88-59CB-43AA-AC96-86C33EA2BFBB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.RT.MainApp.Model", "NNR.CoPakageInspector.RT.MainApp.Model\NNR.CoPackageInspector.RT.MainApp.Model.csproj", "{0DB18B88-59CB-43AA-AC96-86C33EA2BFBB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NNR.CoPackageInspector.RT.Framework", "NNR.CoPackageInspector.RT.Framework", "{451AC12C-1F8B-453C-90AF-D26E2B2B6D5A}"
 EndProject
@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.Main
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.RT.Framework.Interface", "NNR.CoPackageInspector.RT.Framework.Interface\NNR.CoPackageInspector.RT.Framework.Interface.csproj", "{D788EA2F-68AB-40C8-9B1D-78FD43B550D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPakageInspector.RT.MainApp.Controller", "NNR.CoPakageInspector.RT.MainApp.Controller\NNR.CoPakageInspector.RT.MainApp.Controller.csproj", "{FC19C5E8-0CE8-4314-9FC3-A3C272867AE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.RT.MainApp.Controller", "NNR.CoPakageInspector.RT.MainApp.Controller\NNR.CoPackageInspector.RT.MainApp.Controller.csproj", "{FC19C5E8-0CE8-4314-9FC3-A3C272867AE9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MainApp", "MainApp", "{A404A33C-ED83-4B4A-AD46-769EB438BA75}"
 EndProject

@@ -18,7 +18,6 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model
 
         private ApplicationConditionState _applicationConditionState = ApplicationConditionState.Startup;
 
-        private CompositeDisposable _disposables = new CompositeDisposable();
 
         #endregion
 
@@ -33,7 +32,9 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model
 
         #region イベントハンドラ
 
-        public event EventHandler<ApplicationConditionChangeEventArgs> ConditionChanged;
+        private  Action<ApplicationConditionState> _updateChange;
+
+        public Action<ApplicationConditionState> UpdateChange  => _updateChange;
 
         #endregion
 
@@ -44,6 +45,7 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model
         public ApplicationCondition()
         {
             _applicationConditionState = ApplicationConditionState.Startup;
+            _updateChange += _onConditionChange;
         }
 
 
@@ -52,36 +54,28 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model
         /// <summary>
         /// コンディション切り替えハンドラ
         /// </summary>
-        public void OnConditionChange(ApplicationConditionChangeEventArgs e)
+        private void _onConditionChange(ApplicationConditionState state)
         {
-            _applicationConditionState = e.Condition;
-
-            ConditionChanged?.Invoke(this, e);
+            _applicationConditionState = state;
         }
 
         #endregion
 
 
-        #region メソッド
-
-
-        public IDisposable ConditionChangeAsObservable(Action<ApplicationConditionChangeEventArgs> handler)
+        public IDisposable ConditionChangeAsObservable(Action<ApplicationConditionState> action)
         {
-            return Observable.FromEvent<EventHandler<ApplicationConditionChangeEventArgs>, ApplicationConditionChangeEventArgs>(
-                    h => (s, e) => h(e),
-                    h => ConditionChanged += h,
-                    h => ConditionChanged -= h
-                    ).Subscribe(handler);
+            return Observable.FromEvent<Action<ApplicationConditionState>, ApplicationConditionState>(
+                               h => h,
+                               h => _updateChange += h,
+                               h => _updateChange -= h)
+                                .Subscribe(action);
         }
 
-        /// <summary>
-        /// オブジェクトの破棄
-        /// </summary>
+
         public void Dispose()
         {
-            _disposables?.Dispose();
+            _updateChange -= _onConditionChange;
         }
 
-        #endregion
     }
 }

@@ -1,6 +1,7 @@
-﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
+﻿using NNR.CoPackageInspector.RT.Framework.Interface.Model;
+using NNR.CoPackageInspector.RT.MainApp.Interface;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View;
-using NNR.CoPakageInspector.RT.MainApp.Model.Station;
+using NNR.CoPackageInspector.RT.MainApp.Model.Station;
 using NNR.CoPakageInspector.RT.MainApp.View.Properties;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
 {
     public partial class AutoPilotPanel : UserControl, IAutoPilotPanel
     {
-        private StationCollection _stations;
+        private IStationCollection _stations;
 
         /// <summary>
         /// コンストラクタ
@@ -29,8 +30,8 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
 
         public void OnResetOrigin(EventArgs e)
         {
-            var stations = MainAppContextProvider.GetInstance().MainAppModel.Stations;
-            stations.ResetToOrigin();
+            _stations = MainAppContextProvider.GetInstance().MainAppModel.Stations;
+            _stations.ResetToOrigin();
         }
 
         

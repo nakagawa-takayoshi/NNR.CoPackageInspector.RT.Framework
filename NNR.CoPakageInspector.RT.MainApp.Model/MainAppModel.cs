@@ -1,5 +1,5 @@
-﻿using NNR.CopackageInspector.RT.Framework.Model.Workpiece;
-using NNR.CoPackageInspector.RT.Framework.Interface.Model;
+﻿using NNR.CoPackageInspector.RT.Framework.Interface.Model;
+using NNR.CoPackageInspector.RT.Framework.Model.Workpiece;
 using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
 using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 using NNR.CoPakageInspector.RT.MainApp.Model.Interface;
@@ -18,7 +18,7 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model
 
         public IStationCollection Stations { get; set; }
 
-        public IWorkpieceModel WorkpieceModel { get; set; } = new WorkpieceModel(new WorkpieceSize(0,0));
+        public IWorkpieceModel WorkpieceModel { get; set; } = new WorkpieceModel(new WorkpieceTypeModel(Guid.Empty));
 
         public IApplicationCondition AppCondition { get; }
 

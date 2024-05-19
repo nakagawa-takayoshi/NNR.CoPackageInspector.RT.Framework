@@ -12,6 +12,8 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface.Model
     {
         ApplicationConditionState State { get; }
 
-        event EventHandler<ApplicationConditionChangeEventArgs> ConditionChanged;
+        IDisposable ConditionChangeAsObservable(Action<ApplicationConditionState> action);
+
+        Action<ApplicationConditionState> UpdateChange { get; }
     }
 }
