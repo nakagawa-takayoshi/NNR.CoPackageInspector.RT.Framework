@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
 {
+    /// <summary>
+    /// ワークピースボタンパネル
+    /// </summary>
     public partial class WorkpieceButtonPanel : UserControl
     {
         /// <summary>
@@ -37,13 +40,16 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
         }
 
         /// <summary>
-        /// 
+        /// ボタンのマウスダウン
         /// </summary>
         private void _buttonInner_MouseDown(object sender, MouseEventArgs e)
         {
             _workpiecePanel.BackColor = _buttonInner.FlatAppearance.MouseDownBackColor;
         }
 
+        /// <summary>
+        /// ボタンのマウスアップ
+        /// </summary>
         private void _buttonInner_MouseUp(object sender, MouseEventArgs e)
         {
             _workpiecePanel.BackColor = _buttonInner.FlatAppearance.MouseOverBackColor;
