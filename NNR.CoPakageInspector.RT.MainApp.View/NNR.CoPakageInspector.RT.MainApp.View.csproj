@@ -155,6 +155,12 @@
       <DependentUpon>TitleBar.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\TitleBarItem.cs" />
+    <Compile Include="UserPanels\ReadOnlyWorkpiecePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\ReadOnlyWorkpiecePanel.Designer.cs">
+      <DependentUpon>ReadOnlyWorkpiecePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanels\WorkpieceButtonPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TitleBar.resx">
       <DependentUpon>TitleBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\ReadOnlyWorkpiecePanel.resx">
+      <DependentUpon>ReadOnlyWorkpiecePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPanels\WorkpieceButtonPanel.resx">
       <DependentUpon>WorkpieceButtonPanel.cs</DependentUpon>

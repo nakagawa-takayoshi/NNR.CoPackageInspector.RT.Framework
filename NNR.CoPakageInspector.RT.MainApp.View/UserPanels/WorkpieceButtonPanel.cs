@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,9 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
     /// </summary>
     public partial class WorkpieceButtonPanel : UserControl
     {
+
+        private event EventHandler ButtonClick;
+
         /// <summary>
         /// コンストラクタ
         /// </summary>
@@ -23,36 +27,21 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
             InitializeComponent();
         }
 
-        /// <summary>
-        /// ボタンのマウスオーバー
-        /// </summary>
-        private void _buttonInner_MouseHover(object sender, EventArgs e)
+        public IObservable<EventArgs> ButtonClickedAsObservable()
         {
-            _workpiecePanel.BackColor = _buttonInner.FlatAppearance.MouseOverBackColor;
+            return Observable.FromEvent<EventHandler, EventArgs>(
+                               h => (sender, e) => h(e),
+                                h => ButtonClick += h,
+                                h => ButtonClick -= h
+                   );
         }
 
         /// <summary>
-        /// ボタンのマウスリーブ
+        /// ボタンクリック処理
         /// </summary>
-        private void _buttonInner_MouseLeave(object sender, EventArgs e)
+        private void _buttonInner_Click(object sender, EventArgs e)
         {
-            _workpiecePanel.BackColor = _buttonInner.BackColor;
-        }
-
-        /// <summary>
-        /// ボタンのマウスダウン
-        /// </summary>
-        private void _buttonInner_MouseDown(object sender, MouseEventArgs e)
-        {
-            _workpiecePanel.BackColor = _buttonInner.FlatAppearance.MouseDownBackColor;
-        }
-
-        /// <summary>
-        /// ボタンのマウスアップ
-        /// </summary>
-        private void _buttonInner_MouseUp(object sender, MouseEventArgs e)
-        {
-            _workpiecePanel.BackColor = _buttonInner.FlatAppearance.MouseOverBackColor;
+            ButtonClick?.Invoke(sender, e);
         }
     }
 }

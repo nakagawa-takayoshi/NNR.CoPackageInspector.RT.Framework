@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this._buttonInner = new System.Windows.Forms.Button();
-            this._workpiecePanel = new NNR.CoPakageInspector.RT.MainApp.View.UserPanels.WorkpiecePanel();
+            this._workpiecePanel = new NNR.CoPakageInspector.RT.MainApp.View.UserPanels.ReadOnlyWorkpiecePanel();
             this._buttonInner.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,15 +45,11 @@
             this._buttonInner.Size = new System.Drawing.Size(1042, 150);
             this._buttonInner.TabIndex = 0;
             this._buttonInner.UseVisualStyleBackColor = true;
-            this._buttonInner.MouseDown += new System.Windows.Forms.MouseEventHandler(this._buttonInner_MouseDown);
-            this._buttonInner.MouseLeave += new System.EventHandler(this._buttonInner_MouseLeave);
-            this._buttonInner.MouseHover += new System.EventHandler(this._buttonInner_MouseHover);
-            this._buttonInner.MouseUp += new System.Windows.Forms.MouseEventHandler(this._buttonInner_MouseUp);
+            this._buttonInner.Click += new System.EventHandler(this._buttonInner_Click);
             // 
             // _workpiecePanel
             // 
             this._workpiecePanel.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this._workpiecePanel.Enabled = false;
             this._workpiecePanel.Location = new System.Drawing.Point(5, 5);
             this._workpiecePanel.Margin = new System.Windows.Forms.Padding(5);
             this._workpiecePanel.Name = "_workpiecePanel";
@@ -75,6 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Button _buttonInner;
-        private WorkpiecePanel _workpiecePanel;
+        private ReadOnlyWorkpiecePanel _workpiecePanel;
     }
 }
