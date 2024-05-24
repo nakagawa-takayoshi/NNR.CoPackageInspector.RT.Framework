@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NNR.CoPackageInspector.RT.Framework.Model.Workpiece;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
     /// </summary>
     public partial class WorkpieceButtonPanel : UserControl
     {
-
+        private readonly WorkpieceTypeModel _workpieceTypeModel;
         private event EventHandler ButtonClick;
 
         /// <summary>
@@ -26,6 +27,16 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        public WorkpieceButtonPanel(WorkpieceTypeModel workpieceTypeModel)
+            : this()
+        {
+            _workpieceTypeModel = workpieceTypeModel;
+        }
+
 
         public IObservable<EventArgs> ButtonClickedAsObservable()
         {
