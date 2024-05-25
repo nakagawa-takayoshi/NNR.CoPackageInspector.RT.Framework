@@ -59,6 +59,10 @@
     <Compile Include="AutoPilot\AutoPilotPortOutObserver.cs" />
     <Compile Include="AutoPilot\Interface\IAutoPilotObserver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateTransition\StateTransitionObsavable.cs" />
+    <Compile Include="StateTransition\StateTansitionController.cs" />
+    <Compile Include="StateTransition\TriggerKeyUnscriber.cs" />
+    <Compile Include="TriggerKeyController.cs" />
     <Compile Include="WorkpieceController.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +76,10 @@
     <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Model\NNR.CoPackageInspector.RT.Framework.Model.csproj">
       <Project>{326c229a-bb48-4796-a5c2-f44eebb0ee1c}</Project>
       <Name>NNR.CoPackageInspector.RT.Framework.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.Model\NNR.CoPackageInspector.RT.MainApp.Model.csproj">
+      <Project>{0DB18B88-59CB-43AA-AC96-86C33EA2BFBB}</Project>
+      <Name>NNR.CoPackageInspector.RT.MainApp.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
