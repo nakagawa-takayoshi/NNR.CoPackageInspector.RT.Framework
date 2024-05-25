@@ -59,6 +59,7 @@
     <Compile Include="Interface\IMainAppModelWriter.cs" />
     <Compile Include="MainAppModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateTransit\TriggerKeys\TriggerKey.cs" />
     <Compile Include="Station\StationCollectionAbstractFactory.cs" />
     <Compile Include="Station\StationCollectionConcreteFactory.cs" />
     <Compile Include="Station\StationCollectionFactory.cs" />
