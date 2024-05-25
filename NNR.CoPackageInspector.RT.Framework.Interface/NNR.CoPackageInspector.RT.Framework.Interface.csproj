@@ -49,6 +49,8 @@
     <Compile Include="Model\IStationItem.cs" />
     <Compile Include="Model\IWorkpieceModel.cs" />
     <Compile Include="Model\IWorkpieceSize.cs" />
+    <Compile Include="Model\StateTansit\IStateTransitionObsavable.cs" />
+    <Compile Include="Model\StateTansit\ITriggerKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
