@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NNR.CoPackageInspector.RT.F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspectorApp", "NNR.CoPackageInspectorApp\NNR.CoPackageInspectorApp.csproj", "{BA3DF245-DC54-42DF-AE6E-1987E57B34AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPakageInspector.RT.MainApp.View", "NNR.CoPakageInspector.RT.MainApp.View\NNR.CoPakageInspector.RT.MainApp.View.csproj", "{736AE4AC-6885-4D1A-BDAC-2CCA8A72376B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.RT.MainApp.View", "NNR.CoPakageInspector.RT.MainApp.View\NNR.CoPackageInspector.RT.MainApp.View.csproj", "{736AE4AC-6885-4D1A-BDAC-2CCA8A72376B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.RT.MainApp.Interface", "NNR.CoPackageInspector.RT.MainApp.Interface\NNR.CoPackageInspector.RT.MainApp.Interface.csproj", "{18ED2796-92E0-487C-BB20-7B69E130707F}"
 EndProject
@@ -34,6 +34,20 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.RT.Exclusive.Model", "Excrucive\NNR.CoPackageInspector.RT.Exclusive.Model\NNR.CoPackageInspector.RT.Exclusive.Model.csproj", "{F55841E8-A0CA-4452-8C5B-C08D355A5A98}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.RT.Exclusive.Interface", "Excrucive\NNR.CoPackageInspector.RT.Exclusive.Interface\NNR.CoPackageInspector.RT.Exclusive.Interface.csproj", "{6D24DEB6-7890-41C0-8E1D-31F91DDAAE61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EquipmentSetup", "EquipmentSetup", "{7FE03412-2AA7-495C-BDE5-6EC474F6FA60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPckageInspector.RT.EquipmentSetup.Controller", "EquipmentSetup\NNR.CoPckageInspector.RT.EquipmentSetup.Controller\NNR.CoPckageInspector.RT.EquipmentSetup.Controller.csproj", "{D8CE7734-5475-4262-8D1D-B510F38CD415}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPckageInspector.RT.EquipmentSetup.View", "EquipmentSetup\NNR.CoPckageInspector.RT.EquipmentSetup.View\NNR.CoPckageInspector.RT.EquipmentSetup.View.csproj", "{DEBEE21F-A555-455A-92EA-FB9D2E3632E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomControl", "CustomControl", "{90B3875E-7E56-45D1-9365-836958711BFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.CustomControl.View", "CustomControl\NNR.CoPackageInspector.CustomControl.View\NNR.CoPackageInspector.CustomControl.View.csproj", "{A7CBD8E4-FCEF-4EF7-94D4-436A3986AAF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.CustomControl.Model", "CustomControl\NNR.CoPackageInspector.CustomControl.Model\NNR.CoPackageInspector.CustomControl.Model.csproj", "{A17F63B0-36BB-42C1-8B17-9CEAAE2BB441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.CustomControl.Interface", "CustomControl\NNR.CoPackageInspector.CustomControl.Interface\NNR.CoPackageInspector.CustomControl.Interface.csproj", "{2A344481-00CF-43D1-A855-21FA75613CDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +103,26 @@ Global
 		{6D24DEB6-7890-41C0-8E1D-31F91DDAAE61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D24DEB6-7890-41C0-8E1D-31F91DDAAE61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D24DEB6-7890-41C0-8E1D-31F91DDAAE61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8CE7734-5475-4262-8D1D-B510F38CD415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CE7734-5475-4262-8D1D-B510F38CD415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CE7734-5475-4262-8D1D-B510F38CD415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CE7734-5475-4262-8D1D-B510F38CD415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEBEE21F-A555-455A-92EA-FB9D2E3632E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEBEE21F-A555-455A-92EA-FB9D2E3632E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEBEE21F-A555-455A-92EA-FB9D2E3632E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEBEE21F-A555-455A-92EA-FB9D2E3632E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CBD8E4-FCEF-4EF7-94D4-436A3986AAF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CBD8E4-FCEF-4EF7-94D4-436A3986AAF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CBD8E4-FCEF-4EF7-94D4-436A3986AAF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CBD8E4-FCEF-4EF7-94D4-436A3986AAF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A17F63B0-36BB-42C1-8B17-9CEAAE2BB441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A17F63B0-36BB-42C1-8B17-9CEAAE2BB441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A17F63B0-36BB-42C1-8B17-9CEAAE2BB441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A17F63B0-36BB-42C1-8B17-9CEAAE2BB441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A344481-00CF-43D1-A855-21FA75613CDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A344481-00CF-43D1-A855-21FA75613CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A344481-00CF-43D1-A855-21FA75613CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A344481-00CF-43D1-A855-21FA75613CDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +139,11 @@ Global
 		{FC19C5E8-0CE8-4314-9FC3-A3C272867AE9} = {A404A33C-ED83-4B4A-AD46-769EB438BA75}
 		{F55841E8-A0CA-4452-8C5B-C08D355A5A98} = {2D393F64-0953-4881-8A46-983C625F1838}
 		{6D24DEB6-7890-41C0-8E1D-31F91DDAAE61} = {2D393F64-0953-4881-8A46-983C625F1838}
+		{D8CE7734-5475-4262-8D1D-B510F38CD415} = {7FE03412-2AA7-495C-BDE5-6EC474F6FA60}
+		{DEBEE21F-A555-455A-92EA-FB9D2E3632E6} = {7FE03412-2AA7-495C-BDE5-6EC474F6FA60}
+		{A7CBD8E4-FCEF-4EF7-94D4-436A3986AAF2} = {90B3875E-7E56-45D1-9365-836958711BFF}
+		{A17F63B0-36BB-42C1-8B17-9CEAAE2BB441} = {90B3875E-7E56-45D1-9365-836958711BFF}
+		{2A344481-00CF-43D1-A855-21FA75613CDA} = {90B3875E-7E56-45D1-9365-836958711BFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5096F416-40FB-4F10-946A-7C3AC67C9B5A}

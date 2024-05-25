@@ -10,13 +10,9 @@ namespace NNR.CopackageInspector.RT.Framework.Controller
 {
     public class WorkpieceController
     {
-
         private Action<IWorkpieceModel> _action = delegate { };
 
         private IWorkpieceModel _workpieceModel;
-
-        private EventHandler _updateWorkpieceModel;
-
 
         /// <summary>
         /// コンストラクタ
@@ -26,7 +22,7 @@ namespace NNR.CopackageInspector.RT.Framework.Controller
             _workpieceModel = workpieceModel;            
         }
 
-        public IDisposable updateWorkpieceModelAsObservable(Action<IWorkpieceModel> action)
+        public IDisposable UpdateWorkpieceModelAsObservable(Action<IWorkpieceModel> action)
         {
             return Observable.FromEvent<Action<IWorkpieceModel>, IWorkpieceModel>(
                 h => action += h,

@@ -1,5 +1,6 @@
 ﻿
 using NNR.CoPackageInspector.RT.MainApp.Interface;
+using NNR.CoPackageInspector.RT.MainApp.Interface.View;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View.Menu;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider
     public class MenuPanelProvider
     {
         private List<UserControl> _menuPanels;
+        Dictionary<Menues, Action> _menuPanelSwitcher = new Dictionary<Menues, Action>();
+        IDisposable _menuDispose;
 
         public enum Menues
         {
@@ -20,6 +23,7 @@ namespace NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider
             Main,
             AutoPilot,
         }
+
         public static MenuPanelProvider Create()
         {
             return new MenuPanelProvider();
@@ -27,6 +31,11 @@ namespace NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider
         private MenuPanelProvider()
         {
             _menuPanels = MainAppContextProvider.GetInstance().MainAppModel.MenuPanels;
+
+            _menuPanelSwitcher.Add(Menues.Main, () =>
+            {
+
+            });
         }
 
        public void SwitchToMenu(Menues menu)
