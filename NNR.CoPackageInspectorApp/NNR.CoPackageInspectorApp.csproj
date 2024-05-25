@@ -97,9 +97,9 @@
       <Project>{0db18b88-59cb-43aa-ac96-86c33ea2bfbb}</Project>
       <Name>NNR.CoPackageInspector.RT.MainApp.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.View\NNR.CoPakageInspector.RT.MainApp.View.csproj">
+    <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.View\NNR.CoPackageInspector.RT.MainApp.View.csproj">
       <Project>{736AE4AC-6885-4D1A-BDAC-2CCA8A72376B}</Project>
-      <Name>NNR.CoPakageInspector.RT.MainApp.View</Name>
+      <Name>NNR.CoPackageInspector.RT.MainApp.View</Name>
     </ProjectReference>
     <ProjectReference Include="..\NNR.Liblary.Utility\NNR.Liblary.Utility.csproj">
       <Project>{E9A1EA66-8C5E-489E-B8AC-A702080F688B}</Project>
