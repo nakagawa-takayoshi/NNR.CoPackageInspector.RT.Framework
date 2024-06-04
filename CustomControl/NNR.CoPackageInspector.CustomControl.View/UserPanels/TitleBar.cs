@@ -6,16 +6,26 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace NNR.CoPackageInspector.CustomControl.View             
+namespace NNR.CoPackageInspector.CustomControl.View
 {
     public partial class TitleBar : UserControl
     {
+        private bool _isReturnButton = false;
         public string Captions { get; set; } = string.Empty;
 
         public int FontSize { get; set; } = 24;
 
         private CaptionCollection _captions = new CaptionCollection();
         private List<GraphicsPath> _titleBarPath = new List<GraphicsPath>();
+
+        public bool IsReturnButton { get => _isReturnButton;
+
+            set
+            {
+                _isReturnButton = value;
+
+                _returnButton.Visible = value;
+            } }
 
         /// <summary>
         /// コンストラクタ
@@ -48,7 +58,20 @@ namespace NNR.CoPackageInspector.CustomControl.View
                 ii++;
             }
 
+            _returnButton.Visible = _isReturnButton;
+
             base.OnLoad(e);
+        }
+
+        protected override void OnSizeChanged(EventArgs e)
+        {
+            if (!_isReturnButton) return;
+
+            _returnButton.Width = (int)(Height * 2);   
+            _returnButton.Height = Height;
+            _returnButton.Location = new Point(Width - _returnButton.Width - (Margin.All*4) - (_returnButton.FlatAppearance.BorderSize*4) , 0);
+
+            base.OnSizeChanged(e);
         }
 
 
