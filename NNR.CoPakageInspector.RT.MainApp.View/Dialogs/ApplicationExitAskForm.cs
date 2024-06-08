@@ -1,4 +1,4 @@
-﻿using NNR.CoPakageInspector.RT.MainApp.View.Properties;
+﻿using NNR.CoPackageInspector.RT.MainApp.View.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

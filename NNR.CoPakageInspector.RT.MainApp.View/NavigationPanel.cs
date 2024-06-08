@@ -1,4 +1,5 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,28 +22,28 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
         private void _buttonOverView_Click(object sender, EventArgs e)
         {
             var mainPanels = MainPanelsProvider.Create();
-            mainPanels.SwitchToPanel(MainPanelsProvider.Panel.OverView);
+            mainPanels.SwitchPanel(NcopPanelType.OverView);
 
             var menuProvider = MenuPanelProvider.Create();
-            menuProvider.SwitchToMenu(MenuPanelProvider.Menues.OverView);
+            menuProvider.SwitchMenu(NcopMenuType.OverView);
         }
 
         private void _buttonEquipmentSetup_Click(object sender, EventArgs e)
         {
             var mainPanels = MainPanelsProvider.Create();
-            mainPanels.SwitchToPanel(MainPanelsProvider.Panel.Equuipment);
+            mainPanels.SwitchPanel(NcopPanelType.Equuipment);
 
             var menuProvider = MenuPanelProvider.Create();
-            menuProvider.SwitchToMenu(MenuPanelProvider.Menues.Main);
+            menuProvider.SwitchMenu(NcopMenuType.Equipment);
         }
 
         private void _buttonAutoPilot_Click(object sender, EventArgs e)
         {
             var mainPanels = MainPanelsProvider.Create();
-            mainPanels.SwitchToPanel(MainPanelsProvider.Panel.AutoPilot);
+            mainPanels.SwitchPanel(NcopPanelType.AutoPilot);
 
             var menuProvider = MenuPanelProvider.Create();
-            menuProvider.SwitchToMenu(MenuPanelProvider.Menues.AutoPilot);
+            menuProvider.SwitchMenu(NcopMenuType.AutoPilot);
         }
     }
 }

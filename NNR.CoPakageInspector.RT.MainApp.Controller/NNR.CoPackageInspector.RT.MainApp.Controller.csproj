@@ -61,6 +61,7 @@
     <Compile Include="ExculutionControllers\Triggers\AutoPilotTriggerType.cs" />
     <Compile Include="Factory\MainAppControllersFactory.cs" />
     <Compile Include="MainAppControllers.cs" />
+    <Compile Include="MainApp\MainAppRenewController.cs" />
     <Compile Include="PanelsProvider\MainPanelsProvider.cs" />
     <Compile Include="PanelsProvider\MenuPanelProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

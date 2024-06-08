@@ -49,6 +49,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.Cust
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.CustomControl.Interface", "CustomControl\NNR.CoPackageInspector.CustomControl.Interface\NNR.CoPackageInspector.CustomControl.Interface.csproj", "{2A344481-00CF-43D1-A855-21FA75613CDA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OverView", "OverView", "{D518B4EA-92D0-4A11-A895-3204BACB4FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.RT.OverView.View", "OverView\NNR.CoPackageInspector.RT.OverView.View\NNR.CoPackageInspector.RT.OverView.View.csproj", "{505D236B-A155-4BF8-B23D-E3D7CDB8530A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NNR.CoPackageInspector.RT.OverView.Interface", "OverView\NNR.CoPackageInspector.RT.OverView.Interface\NNR.CoPackageInspector.RT.OverView.Interface.csproj", "{7EAD0379-C899-4690-A338-2B34D6D60F77}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +129,14 @@ Global
 		{2A344481-00CF-43D1-A855-21FA75613CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A344481-00CF-43D1-A855-21FA75613CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A344481-00CF-43D1-A855-21FA75613CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{505D236B-A155-4BF8-B23D-E3D7CDB8530A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505D236B-A155-4BF8-B23D-E3D7CDB8530A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505D236B-A155-4BF8-B23D-E3D7CDB8530A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505D236B-A155-4BF8-B23D-E3D7CDB8530A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EAD0379-C899-4690-A338-2B34D6D60F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EAD0379-C899-4690-A338-2B34D6D60F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EAD0379-C899-4690-A338-2B34D6D60F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EAD0379-C899-4690-A338-2B34D6D60F77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,6 +158,8 @@ Global
 		{A7CBD8E4-FCEF-4EF7-94D4-436A3986AAF2} = {90B3875E-7E56-45D1-9365-836958711BFF}
 		{A17F63B0-36BB-42C1-8B17-9CEAAE2BB441} = {90B3875E-7E56-45D1-9365-836958711BFF}
 		{2A344481-00CF-43D1-A855-21FA75613CDA} = {90B3875E-7E56-45D1-9365-836958711BFF}
+		{505D236B-A155-4BF8-B23D-E3D7CDB8530A} = {D518B4EA-92D0-4A11-A895-3204BACB4FA7}
+		{7EAD0379-C899-4690-A338-2B34D6D60F77} = {D518B4EA-92D0-4A11-A895-3204BACB4FA7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5096F416-40FB-4F10-946A-7C3AC67C9B5A}

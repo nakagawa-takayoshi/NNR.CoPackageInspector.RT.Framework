@@ -7,7 +7,7 @@
     <ProjectGuid>{736AE4AC-6885-4D1A-BDAC-2CCA8A72376B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NNR.CoPakageInspector.RT.MainApp.View</RootNamespace>
+    <RootNamespace>NNR.CoPackageInspector.RT.MainApp.View</RootNamespace>
     <AssemblyName>NNR.CoPakageInspector.RT.MainApp.View</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -87,12 +87,6 @@
     <Compile Include="Dialogs\ApplicationExitAskForm.designer.cs">
       <DependentUpon>ApplicationExitAskForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EquipmentSetupPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="EquipmentSetupPanel.Designer.cs">
-      <DependentUpon>EquipmentSetupPanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="EqupmentSetupMenuPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,12 +117,6 @@
     </Compile>
     <Compile Include="OverViewMenuPanel.Designer.cs">
       <DependentUpon>OverViewMenuPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OverViewPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OverViewPanel.Designer.cs">
-      <DependentUpon>OverViewPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="PowerPanel.cs">
       <SubType>UserControl</SubType>
@@ -197,9 +185,6 @@
     <EmbeddedResource Include="Dialogs\ApplicationExitAskForm.resx">
       <DependentUpon>ApplicationExitAskForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EquipmentSetupPanel.resx">
-      <DependentUpon>EquipmentSetupPanel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EqupmentSetupMenuPanel.resx">
       <DependentUpon>EqupmentSetupMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,14 +197,12 @@
     <EmbeddedResource Include="OverViewMenuPanel.resx">
       <DependentUpon>OverViewMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OverViewPanel.resx">
-      <DependentUpon>OverViewPanel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PowerPanel.resx">
       <DependentUpon>PowerPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SubPanel.resx">
@@ -242,6 +225,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EquipmentSetup\NNR.CoPckageInspector.RT.EquipmentSetup.View\NNR.CoPckageInspector.RT.EquipmentSetup.View.csproj">
+      <Project>{DEBEE21F-A555-455A-92EA-FB9D2E3632E6}</Project>
+      <Name>NNR.CoPckageInspector.RT.EquipmentSetup.View</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NNR.CoPackageInspector.RT.Framework.Interface\NNR.CoPackageInspector.RT.Framework.Interface.csproj">
       <Project>{D788EA2F-68AB-40C8-9B1D-78FD43B550D1}</Project>
       <Name>NNR.CoPackageInspector.RT.Framework.Interface</Name>
@@ -258,14 +245,35 @@
       <Project>{FC19C5E8-0CE8-4314-9FC3-A3C272867AE9}</Project>
       <Name>NNR.CoPackageInspector.RT.MainApp.Controller</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NNR.CoPakageInspector.RT.MainApp.Model\NNR.CoPackageInspector.RT.MainApp.Model.csproj">
+      <Project>{0db18b88-59cb-43aa-ac96-86c33ea2bfbb}</Project>
+      <Name>NNR.CoPackageInspector.RT.MainApp.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NNR.Liblary.Utility\NNR.Liblary.Utility.csproj">
       <Project>{e9a1ea66-8c5e-489e-b8ac-a702080f688b}</Project>
       <Name>NNR.Liblary.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OverView\NNR.CoPackageInspector.RT.OverView.View\NNR.CoPackageInspector.RT.OverView.View.csproj">
+      <Project>{505D236B-A155-4BF8-B23D-E3D7CDB8530A}</Project>
+      <Name>NNR.CoPackageInspector.RT.OverView.View</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Resources\PowerOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\PanelsProvider\" />
+    <Folder Include="Factory\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PowerOffColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PowerOffColoMinir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

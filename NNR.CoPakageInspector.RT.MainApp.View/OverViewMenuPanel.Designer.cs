@@ -34,7 +34,7 @@
             // 
             // titleBar1
             // 
-            this.titleBar1.Captions = "Main";
+            this.titleBar1.Captions = "Main, OverView";
             this.titleBar1.Dock = System.Windows.Forms.DockStyle.Top;
             this.titleBar1.FontSize = 14;
             this.titleBar1.Location = new System.Drawing.Point(0, 0);

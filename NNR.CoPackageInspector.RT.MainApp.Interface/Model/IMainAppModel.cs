@@ -1,10 +1,6 @@
 ﻿using NNR.CoPackageInspector.RT.Framework.Interface.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Collections;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 using System.Windows.Forms;
 
 namespace NNR.CoPackageInspector.RT.MainApp.Interface.Model
@@ -15,8 +11,12 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface.Model
 
         IApplicationCondition AppCondition { get; }
 
-        List<UserControl> MainPanels { get; }
+        Control MainPanel { get; }
 
-        List<UserControl> MenuPanels { get; }
+        IPanelsCollection<NcopPanelType> MainPanels { get; }
+
+        IPanelsCollection<NcopMenuType> MenuPanels { get;}
+
+        IMainAppModelWriter GetWriter();
     }
 }

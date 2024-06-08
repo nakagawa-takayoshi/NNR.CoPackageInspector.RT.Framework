@@ -1,18 +1,17 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider;
 using NNR.CoPackageInspector.RT.MainApp.Interface;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
 using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View;
+using NNR.CoPackageInspector.RT.MainApp.Model.Collections;
+using NNR.CoPackageInspector.RT.OverView.View;
 using NNR.CoPakageInspector.RT.MainApp.View;
 using NNR.CoPcakageInspector.RT.MainApp.Controller;
+using NNR.CoPckageInspector.RT.EquipmentSetup.View;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Reactive.Disposables;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NNR.CoPackageInspectorApp
@@ -20,7 +19,10 @@ namespace NNR.CoPackageInspectorApp
     public partial class MainAppForm : Form, IMainAppForm
     {
         private readonly SynchronizationContext _mainAppSyncchronizationConText;
+        private IDisposable _mainPanelDisposable = null;
         public SynchronizationContext MainAppSynchronizationContext => _mainAppSyncchronizationConText;
+
+        public Control MainPanel => _navigationSplitContainer.Panel1;
 
         /// <summary>
         /// コンストラクタ
@@ -41,30 +43,15 @@ namespace NNR.CoPackageInspectorApp
             SuspendLayout();
             var mainAppContext = MainAppContextProvider.GetInstance();
             var mainAppModel = mainAppContext.MainAppModel;
+            var writer = mainAppModel.GetWriter();
 
-            var overViewPanel = new OverViewPanel();
-            overViewPanel.Visible = false;
-            mainAppModel.MainPanels.Add(overViewPanel);
-
-            var autoPilotPanel = new AutoPilotPanel();
-            autoPilotPanel.Visible = false;
-            mainAppModel.MainPanels.Add(autoPilotPanel);
-
-            var equipmentSetupPanel = new EquipmentSetupPanel() { Visible = false };
-            mainAppModel.MainPanels.Add(equipmentSetupPanel);
-            var workpieceSettingPanel = new WorkpieceSettingPanel() { Visible = false };
-            mainAppModel.MainPanels.Add(workpieceSettingPanel);
-
-            _navigationSplitContainer.Panel1.Controls.Clear();
-            _navigationSplitContainer.Panel1.Controls.Add(overViewPanel);
-            _navigationSplitContainer.Panel1.Controls.Add(autoPilotPanel);
-            _navigationSplitContainer.Panel1.Controls.Add(equipmentSetupPanel);
-            _navigationSplitContainer.Panel1.Controls.Add(workpieceSettingPanel);
-
-            var panelProvider = MainPanelsProvider.Create();
-            panelProvider.SwitchToPanel(MainPanelsProvider.Panel.OverView);
+            //CreateMainPanels(MainPanel);
 
             ResumeLayout();
+
+            var panelProvider = MainPanelsProvider.Create();
+            _mainPanelDisposable = panelProvider.SwitchPanel(NcopPanelType.OverView);
+
 
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Size = new Size(1280, 760);
@@ -88,6 +75,70 @@ namespace NNR.CoPackageInspectorApp
             applicationConditionController.Update(ApplicationConditionState.Exit);
 
             base.OnClosed(e);
+        }
+
+
+        private IDisposable CreateOvewViewPanel(Control parentPanel)
+        {
+            _mainPanelDisposable?.Dispose();
+
+            var panel = new OverViewPanel();
+            parentPanel.Controls.Add(panel);
+
+            panel.Visible = true;
+            panel.Dock = DockStyle.Fill;
+
+            return Disposable.Create(() =>
+            {
+                panel.Visible = false;
+                parentPanel.Controls.Remove(panel);
+                panel.Dispose();
+            });
+        }
+
+        private IDisposable CreateEquipmentPanel(Control parentPanel)
+        {
+            _mainPanelDisposable?.Dispose();
+
+            var panel = new EquipmentSetupPanel();
+            parentPanel.Controls.Add(panel);
+
+            panel.Visible = true;
+
+            return Disposable.Create(() =>
+            {
+                panel.Visible = false;
+                parentPanel.Controls.Remove(panel);
+                panel.Dispose();
+            });
+        }
+
+        private IDisposable CreateAutoPilotPanel(Control parentPanel)
+        {
+            _mainPanelDisposable?.Dispose();
+
+            var panel = new AutoPilotPanel();
+            parentPanel.Controls.Add(panel);
+
+            panel.Visible = true;
+
+            return Disposable.Create(() =>
+            {
+                panel.Visible = false;
+                parentPanel.Controls.Remove(panel);
+                panel.Dispose();
+            });
+        }
+
+        public void CreateMainPanels(Control parentControl)
+        {
+            var mainAppContext = MainAppContextProvider.GetInstance();
+            var mainAppModel = mainAppContext.MainAppModel;
+            var mainPanels = mainAppModel.MainPanels;
+
+            mainPanels.Add(NcopPanelType.OverView, () => { return _mainPanelDisposable = CreateOvewViewPanel(parentControl); });
+            mainPanels.Add(NcopPanelType.Equuipment, () => { return _mainPanelDisposable = CreateEquipmentPanel(parentControl); });
+            mainPanels.Add(NcopPanelType.AutoPilot, () => { return _mainPanelDisposable = CreateAutoPilotPanel(parentControl); });
         }
     }
 }

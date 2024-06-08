@@ -56,6 +56,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CustomControl\NNR.CoPackageInspector.CustomControl.View\NNR.CoPackageInspector.CustomControl.View.csproj">
+      <Project>{a7cbd8e4-fcef-4ef7-94d4-436a3986aaf2}</Project>
+      <Name>NNR.CoPackageInspector.CustomControl.View</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\NNR.CoPackageInspector.RT.MainApp.Interface\NNR.CoPackageInspector.RT.MainApp.Interface.csproj">
       <Project>{18ed2796-92e0-487c-bb20-7b69e130707f}</Project>
       <Name>NNR.CoPackageInspector.RT.MainApp.Interface</Name>
@@ -64,6 +68,9 @@
       <Project>{fc19c5e8-0ce8-4314-9fc3-a3c272867ae9}</Project>
       <Name>NNR.CoPackageInspector.RT.MainApp.Controller</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Factory\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

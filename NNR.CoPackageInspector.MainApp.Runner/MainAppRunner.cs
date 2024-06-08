@@ -1,5 +1,6 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Controller.Factory;
 using NNR.CoPackageInspector.RT.MainApp.Interface;
+using NNR.CoPackageInspector.RT.MainApp.Interface.View;
 using NNR.CoPackageInspector.RT.MainApp.Model.Factory;
 using NNR.CoPackageInspector.RT.MainApp.Model.Station;
 using System;
@@ -18,7 +19,7 @@ namespace NNR.CoPackageInspector.MainApp.Runner
         /// </summary>
         public static  MainAppRunner Create(IMainAppContext mainAppContext)
         {
-            return new MainAppRunner(mainAppContext);
+            return new MainAppRunner(mainAppContext);       
         }
 
         /// <summary>
@@ -42,6 +43,8 @@ namespace NNR.CoPackageInspector.MainApp.Runner
 
             var mainAppContext = MainAppContextProvider.GetInstance();
 
+            InstantiationApplication(mainAppContext.MainAppForm);
+
             if (!(mainAppContext.MainAppForm is Form mainAppForm)) return;
 
             Application.Run(mainAppForm);
@@ -53,22 +56,18 @@ namespace NNR.CoPackageInspector.MainApp.Runner
         /// </summary>
         private void CreateMainAppModel()
         {
-            // ステーションンコレクションを生成
-            var stationCollection = StationCollectionFactory.Create();
-
-
-            // MainAppModelの抽象化ファクトリークラスを生成
-            var mainAppModelAbstractFactory = MainAppModelAbstractFactory.Create();
-
-            // ステーションモデルを追加
-            mainAppModelAbstractFactory.Add(stationCollection);
-
-            // ファクトリークラスを生成
-            var mainAppModelFactory = mainAppModelAbstractFactory.CreteFactory();
-
             var mainAppContext = MainAppContextProvider.GetInstance();
             var mainAppContextInitializer = MainAppContextInitializer.Create(mainAppContext);
 
+            // MainAppModelの抽象化ファクトリークラスを生成
+            var mainAppModelAbstractFactory = MainAppModelAbstractFactory.Create();
+            // ステーションンコレクションを生成
+            var stationCollection = StationCollectionFactory.Create();
+
+            // ステーションモデルを追加
+            mainAppModelAbstractFactory.Add(stationCollection);
+            // ファクトリークラスを生成
+            var mainAppModelFactory = mainAppModelAbstractFactory.CreteFactory();
 
             // MainAppModelを生成
             mainAppContextInitializer.MainAppModel = mainAppModelFactory.Create();
@@ -81,6 +80,11 @@ namespace NNR.CoPackageInspector.MainApp.Runner
             var mainAppContextInitializer = MainAppContextInitializer.Create(mainAppContext);
 
             mainAppContextInitializer.MainAppControllers = MainAppControllersFactory.Create();
+        }
+
+        public void InstantiationApplication(IMainAppForm mainAppForm)
+        {
+            mainAppForm.CreateMainPanels(mainAppForm.MainPanel);
         }
     }
 }

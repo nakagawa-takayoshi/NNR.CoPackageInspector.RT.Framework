@@ -49,6 +49,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UserPanels\LoaderPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\LoaderPanel.Designer.cs">
+      <DependentUpon>LoaderPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserPanels\TitleBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\LoaderPanel.resx">
+      <DependentUpon>LoaderPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserPanels\TitleBar.resx">
       <DependentUpon>TitleBar.cs</DependentUpon>

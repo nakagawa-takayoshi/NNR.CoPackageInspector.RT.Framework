@@ -35,6 +35,16 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Reactive, Version=6.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reactive.6.0.0\lib\net472\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +54,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainAppContext.cs" />
@@ -67,6 +78,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -81,6 +93,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EquipmentSetup\NNR.CoPckageInspector.RT.EquipmentSetup.View\NNR.CoPckageInspector.RT.EquipmentSetup.View.csproj">
+      <Project>{DEBEE21F-A555-455A-92EA-FB9D2E3632E6}</Project>
+      <Name>NNR.CoPckageInspector.RT.EquipmentSetup.View</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NNR.CoPackageInspector.MainApp.Runner\NNR.CoPackageInspector.MainApp.Runner.csproj">
       <Project>{ca476372-c4dc-4e99-b277-493c092cabdb}</Project>
       <Name>NNR.CoPackageInspector.MainApp.Runner</Name>
@@ -104,6 +120,10 @@
     <ProjectReference Include="..\NNR.Liblary.Utility\NNR.Liblary.Utility.csproj">
       <Project>{E9A1EA66-8C5E-489E-B8AC-A702080F688B}</Project>
       <Name>NNR.Liblary.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OverView\NNR.CoPackageInspector.RT.OverView.View\NNR.CoPackageInspector.RT.OverView.View.csproj">
+      <Project>{505D236B-A155-4BF8-B23D-E3D7CDB8530A}</Project>
+      <Name>NNR.CoPackageInspector.RT.OverView.View</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

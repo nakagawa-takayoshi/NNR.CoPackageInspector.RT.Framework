@@ -3,6 +3,7 @@ using NNR.CoPackageInspector.RT.Framework.Model.Station.Enums;
 using NNR.CoPackageInspector.RT.Framework.Model.Station.Interface;
 using System;
 using System.CodeDom;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace NNR.CoPackageInspector.RT.MainApp.Model.Station
 {
-    public class StationCollection : IStationCollection
+    public class StationCollection : IStationCollection, IEnumerable<StationCollectionItem>
     {
         private List<StationCollectionItem> _stations = new List<StationCollectionItem>();
 
@@ -60,6 +61,23 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model.Station
             {
                 station.RotateFunction();
             }
+        }
+
+        public void Add(IStationCollection station)
+        {
+            if (!(station is StationCollection _station)) return;
+
+            _stations.AddRange(_station);
+        }
+
+        public IEnumerator<StationCollectionItem> GetEnumerator()
+        {
+            return _stations.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _stations.AsEnumerable().GetEnumerator();
         }
     }
 }
