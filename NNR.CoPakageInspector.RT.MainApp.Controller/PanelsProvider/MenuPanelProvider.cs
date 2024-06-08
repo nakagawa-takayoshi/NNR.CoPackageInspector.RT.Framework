@@ -1,5 +1,7 @@
 ﻿
 using NNR.CoPackageInspector.RT.MainApp.Interface;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Collections;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View.Menu;
 using System;
@@ -13,17 +15,11 @@ namespace NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider
 {
     public class MenuPanelProvider
     {
-        private List<UserControl> _menuPanels;
-        Dictionary<Menues, Action> _menuPanelSwitcher = new Dictionary<Menues, Action>();
-        IDisposable _menuDispose;
+        private IPanelsCollection<NcopMenuType> _menuPanels;
 
-        public enum Menues
-        {
-            OverView,
-            Main,
-            AutoPilot,
-        }
-
+        /// <summary>
+        /// インスタンスを生成します。
+        /// </summary>
         public static MenuPanelProvider Create()
         {
             return new MenuPanelProvider();
@@ -31,35 +27,11 @@ namespace NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider
         private MenuPanelProvider()
         {
             _menuPanels = MainAppContextProvider.GetInstance().MainAppModel.MenuPanels;
-
-            _menuPanelSwitcher.Add(Menues.Main, () =>
-            {
-
-            });
         }
 
-       public void SwitchToMenu(Menues menu)
+       public IDisposable SwitchMenu(NcopMenuType menuType)
         {
-            foreach (var item in _menuPanels)
-            {
-                if ((menu == Menues.Main) && (item is IMainMenuPanel))
-                {
-                    item.Visible = true;
-                }
-                else if ((menu == Menues.AutoPilot) && (item is IAutoPilotMenu))
-                {
-                    item.Visible = true;
-                }
-                else if ((menu == Menues.OverView) && (item is IOverViewMenuPanel))
-                {
-                    item.Visible = true;
-                }
-                else
-                {
-                    item.Visible = false;
-                }
-            }
+            return _menuPanels[menuType]();
         }
-
     }
 }

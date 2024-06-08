@@ -19,20 +19,27 @@ namespace NNR.CoPackageInspectorApp
 
         private IMaybe<IMainAppControllers> _mainAppControllersContainer = Maybe.Empty<IMainAppControllers>();
 
+        private IMaybe<IMainAppForm> _mainAppFormContainer = Maybe.Empty<IMainAppForm>();
+
         public IMainAppForm MainAppForm => _mainAppForm;
+
+        public IMaybe<IMainAppForm> MainAppFormContainer => _mainAppFormContainer;
 
         public IMainAppModel MainAppModel {
             get =>  _mainAppModelContainer.Object;
             set => _mainAppModelContainer = Maybe.Create(value);
         }
 
+        public SynchronizationContext MainAppSyncchronizationContext => _mainAppSynchronizationContext;
+
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         public IMainAppControllers MainAppControllers
         {
             get => _mainAppControllersContainer.Object;
             set => _mainAppControllersContainer = Maybe.Create(value);
         }
-
-        public SynchronizationContext MainAppSyncchronizationContext => _mainAppSynchronizationContext;
 
 
         /// <summary>

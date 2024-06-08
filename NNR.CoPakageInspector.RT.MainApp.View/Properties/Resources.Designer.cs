@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NNR.CoPakageInspector.RT.MainApp.View.Properties {
+namespace NNR.CoPackageInspector.RT.MainApp.View.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NNR.CoPakageInspector.RT.MainApp.View.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NNR.CoPackageInspector.RT.MainApp.View.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -129,6 +129,16 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.Properties {
         internal static System.Drawing.Bitmap PowerOff {
             get {
                 object obj = ResourceManager.GetObject("PowerOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap PowerOffColoMinir {
+            get {
+                object obj = ResourceManager.GetObject("PowerOffColoMinir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

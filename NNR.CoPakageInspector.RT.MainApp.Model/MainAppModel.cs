@@ -1,14 +1,10 @@
 ﻿using NNR.CoPackageInspector.RT.Framework.Interface.Model;
 using NNR.CoPackageInspector.RT.Framework.Model.Workpiece;
 using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Collections;
 using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
-using NNR.CoPakageInspector.RT.MainApp.Model.Interface;
-using NNR.CoPakageInspector.RT.MainApp.Model.Station;
+using NNR.CoPackageInspector.RT.MainApp.Model.Collections;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NNR.CoPackageInspector.RT.MainApp.Model
@@ -20,19 +16,16 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model
 
         public IWorkpieceModel WorkpieceModel { get; set; } = new WorkpieceModel(new WorkpieceTypeModel(Guid.Empty));
 
-        public IApplicationCondition AppCondition { get; }
+        public IApplicationCondition AppCondition { get; } = new ApplicationCondition();
 
-        /// <summary>
-        /// メインパネル
-        /// </summary>
-        public List<UserControl> MainPanels { get; } = new List<UserControl>();
+        public Control MainPanel { get; set; }
 
-        /// <summary>
-        /// メニューパネル
-        /// </summary>
-        public List<UserControl> MenuPanels { get; } = new List<UserControl>();
+        public IPanelsCollection<NcopPanelType> MainPanels { get; } = new PanelsCollection<NcopPanelType>();
 
-        public static IMainAppModelWriter Create()
+        public IPanelsCollection<NcopMenuType> MenuPanels { get; } = new PanelsCollection<NcopMenuType>();
+
+
+        public static MainAppModel Create()
         {
             return new MainAppModel();
         }
@@ -42,7 +35,12 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model
         /// </summary>
         internal MainAppModel()
         {
-            AppCondition = new ApplicationCondition();
         }
+
+        public IMainAppModelWriter GetWriter()
+        {
+            return this;
+        }
+
     }
 }

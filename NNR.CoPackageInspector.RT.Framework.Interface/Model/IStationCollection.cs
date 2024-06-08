@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,5 +17,7 @@ namespace NNR.CoPackageInspector.RT.Framework.Interface.Model
         /// 機能をローテート
         /// </summary>
         void RoateFunction();
+
+        void Add(IStationCollection station);
     }
 }

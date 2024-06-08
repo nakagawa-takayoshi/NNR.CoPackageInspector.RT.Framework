@@ -1,10 +1,12 @@
-﻿using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
+﻿using NNR.CoPackageInspector.RT.MainApp.Interface;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model;
 using NNR.CoPackageInspector.RT.MainApp.Model.Station;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NNR.CoPackageInspector.RT.MainApp.Model.Factory
 {
@@ -19,9 +21,10 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model.Factory
         public IMainAppModel Create()
         {
             var mainAppModel = MainAppModel.Create();
-            mainAppModel.Stations = StationCollection;
 
-            return (IMainAppModel)mainAppModel;
+            mainAppModel.Stations.Add(StationCollection);
+
+            return mainAppModel;
         }
 
     }

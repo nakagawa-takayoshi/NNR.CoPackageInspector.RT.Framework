@@ -54,9 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationCondition.cs" />
+    <Compile Include="Collections\PanelsCollection.cs" />
     <Compile Include="Factory\MainAppModelAbstractFactory.cs" />
     <Compile Include="Factory\MainAppModelFactory.cs" />
-    <Compile Include="Interface\IMainAppModelWriter.cs" />
     <Compile Include="MainAppModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StateTransit\TriggerKeys\TriggerKey.cs" />
@@ -81,7 +81,10 @@
       <Name>NNR.CoPackageInspector.RT.MainApp.Interface</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Enums\" />
+    <Folder Include="Interface\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

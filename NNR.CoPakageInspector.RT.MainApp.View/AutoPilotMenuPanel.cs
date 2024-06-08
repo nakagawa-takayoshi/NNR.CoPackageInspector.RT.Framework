@@ -1,4 +1,5 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View.Menu;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
         private void RootButton_Clicked(object sender, EventArgs e)
         {
             var menuPanel = MenuPanelProvider.Create();
-            menuPanel.SwitchToMenu(MenuPanelProvider.Menues.Main);
+            menuPanel.SwitchMenu(NcopMenuType.Main);
         }
     }
 }

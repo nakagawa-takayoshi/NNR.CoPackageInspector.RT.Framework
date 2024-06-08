@@ -2,7 +2,6 @@
 using NNR.CoPackageInspector.RT.MainApp.Interface;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View;
 using NNR.CoPackageInspector.RT.MainApp.Model.Station;
-using NNR.CoPakageInspector.RT.MainApp.View.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

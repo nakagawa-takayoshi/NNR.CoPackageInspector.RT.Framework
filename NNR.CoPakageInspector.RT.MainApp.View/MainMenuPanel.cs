@@ -1,13 +1,7 @@
 ﻿using NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 using NNR.CoPackageInspector.RT.MainApp.Interface.View.Menu;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NNR.CoPakageInspector.RT.MainApp.View
@@ -22,22 +16,19 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
         private void _buttonOverView_Click(object sender, EventArgs e)
         {
             var mainPanels = MainPanelsProvider.Create();
-            mainPanels.SwitchToPanel(MainPanelsProvider.Panel.OverView);
+            mainPanels.SwitchPanel(NcopPanelType.OverView);
         }
 
         private void _buttonEquipment_Click(object sender, EventArgs e)
         {
             var mainPanels = MainPanelsProvider.Create();
-            mainPanels.SwitchToPanel(MainPanelsProvider.Panel.Equuipment);
+            mainPanels.SwitchPanel(NcopPanelType.Equuipment);
         }
 
         private void _buttonAutoPilot_Click(object sender, EventArgs e)
         {
             var mainPanels = MainPanelsProvider.Create();
-            mainPanels.SwitchToPanel(MainPanelsProvider.Panel.AutoPilot);
-
-            var menuProvider = MenuPanelProvider.Create();
-            menuProvider.SwitchToMenu(MenuPanelProvider.Menues.AutoPilot);
+            mainPanels.SwitchPanel(NcopPanelType.AutoPilot);
         }
     }
 }
