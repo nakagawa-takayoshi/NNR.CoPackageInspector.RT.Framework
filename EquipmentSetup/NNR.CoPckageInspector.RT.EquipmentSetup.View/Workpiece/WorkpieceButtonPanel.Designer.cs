@@ -1,4 +1,4 @@
-﻿namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
+﻿namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
 {
     partial class WorkpieceButtonPanel
     {
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this._buttonInner = new System.Windows.Forms.Button();
-            this._workpiecePanel = new NNR.CoPakageInspector.RT.MainApp.View.UserPanels.ReadOnlyWorkpiecePanel();
+            this._workpiecePanel = new NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece.ReadOnlyWorkpiecePanel();
             this._buttonInner.SuspendLayout();
             this.SuspendLayout();
             // 

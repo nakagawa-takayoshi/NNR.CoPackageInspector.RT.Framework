@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
+namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
 {
     public partial class ReadOnlyWorkpiecePanel : UserControl
     {

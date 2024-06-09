@@ -1,16 +1,9 @@
-﻿using NNR.CoPackageInspector.RT.Framework.Model.Workpiece;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using System;
 using System.Reactive.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using NNR.CoPackageInspector.RT.Framework.Model.Workpiece;
 
-namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
+namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
 {
     /// <summary>
     /// ワークピースボタンパネル

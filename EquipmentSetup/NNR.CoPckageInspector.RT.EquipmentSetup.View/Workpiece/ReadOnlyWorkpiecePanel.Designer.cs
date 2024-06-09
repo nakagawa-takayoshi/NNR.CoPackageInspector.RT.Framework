@@ -1,4 +1,4 @@
-﻿namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
+﻿namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
 {
     partial class ReadOnlyWorkpiecePanel
     {
