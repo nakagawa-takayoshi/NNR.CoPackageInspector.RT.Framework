@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NNR.CoPackageInspector.RT.MainApp.Controller.PanelsProvider;
+using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 
 namespace NNR.CoPakageInspector.RT.MainApp.View
 {
@@ -15,6 +17,12 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
         public EqupmentSetupMenuPanel()
         {
             InitializeComponent();
+        }
+
+        private void _buttonWorkpieceSetting_Click(object sender, EventArgs e)
+        {
+            var mainPanelProvider = MainPanelsProvider.Create();
+            mainPanelProvider.SwitchPanel(NcopPanelType.WorkpieceSetting);
         }
     }
 }

@@ -28,17 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TitleBar));
             this._returnButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _returnButton
             // 
-            this._returnButton.BackColor = System.Drawing.Color.White;
+            this._returnButton.BackColor = System.Drawing.SystemColors.Control;
             this._returnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this._returnButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._returnButton.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this._returnButton.Image = ((System.Drawing.Image)(resources.GetObject("_returnButton.Image")));
+            this._returnButton.Image = global::NNR.CoPackageInspector.CustomControl.View.Properties.Resources.return_mid;
             this._returnButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this._returnButton.Location = new System.Drawing.Point(927, 0);
             this._returnButton.Name = "_returnButton";

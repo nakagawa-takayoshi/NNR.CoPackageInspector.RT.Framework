@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.titleBar1 = new NNR.CoPakageInspector.RT.MainApp.View.TitleBar();
-            this.button1 = new System.Windows.Forms.Button();
+            this._buttonWorkpieceSetting = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,15 +44,16 @@
             this.titleBar1.Size = new System.Drawing.Size(240, 30);
             this.titleBar1.TabIndex = 0;
             // 
-            // button1
+            // _buttonWorkpieceSetting
             // 
-            this.button1.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(38, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(166, 54);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "ワーク設定";
-            this.button1.UseVisualStyleBackColor = true;
+            this._buttonWorkpieceSetting.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this._buttonWorkpieceSetting.Location = new System.Drawing.Point(38, 57);
+            this._buttonWorkpieceSetting.Name = "_buttonWorkpieceSetting";
+            this._buttonWorkpieceSetting.Size = new System.Drawing.Size(166, 54);
+            this._buttonWorkpieceSetting.TabIndex = 1;
+            this._buttonWorkpieceSetting.Text = "ワーク設定";
+            this._buttonWorkpieceSetting.UseVisualStyleBackColor = true;
+            this._buttonWorkpieceSetting.Click += new System.EventHandler(this._buttonWorkpieceSetting_Click);
             // 
             // button2
             // 
@@ -69,7 +70,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this._buttonWorkpieceSetting);
             this.Controls.Add(this.titleBar1);
             this.Name = "EqupmentSetupMenuPanel";
             this.Size = new System.Drawing.Size(240, 641);
@@ -80,7 +81,7 @@
         #endregion
 
         private TitleBar titleBar1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button _buttonWorkpieceSetting;
         private System.Windows.Forms.Button button2;
     }
 }

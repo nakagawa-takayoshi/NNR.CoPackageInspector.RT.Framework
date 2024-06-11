@@ -31,8 +31,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NNR.CoPackageInspector.RT.Framework.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NNR.CoPackageInspector.RT.Framework.Interface\bin\Debug\NNR.CoPackageInspector.RT.Framework.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="NNR.CoPakageInspector.RT.MainApp.View">
+      <HintPath>..\..\NNR.CoPakageInspector.RT.MainApp.View\obj\Debug\NNR.CoPakageInspector.RT.MainApp.View.dll</HintPath>
+    </Reference>
+    <Reference Include="RoundRobin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\RoundRobin.2.2.1\lib\netstandard2.0\RoundRobin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive, Version=6.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Reactive.6.0.1\lib\net472\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,6 +62,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EquipmentSetupPanel.cs">
@@ -49,16 +72,74 @@
       <DependentUpon>EquipmentSetupPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Workpiece\ReadOnlyWorkpiecePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workpiece\ReadOnlyWorkpiecePanel.Designer.cs">
+      <DependentUpon>ReadOnlyWorkpiecePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workpiece\WorkpieceButtonPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workpiece\WorkpieceButtonPanel.Designer.cs">
+      <DependentUpon>WorkpieceButtonPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workpiece\WorkpieceSettingsMenuPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workpiece\WorkpieceSettingsMenuPanel.Designer.cs">
+      <DependentUpon>WorkpieceSettingsMenuPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workpiece\WorkpiecePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workpiece\WorkpiecePanel.Designer.cs">
+      <DependentUpon>WorkpiecePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Workpiece\WorkpieceSettingPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Workpiece\WorkpieceSettingPanel.Designer.cs">
+      <DependentUpon>WorkpieceSettingPanel.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EquipmentSetupPanel.resx">
       <DependentUpon>EquipmentSetupPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workpiece\ReadOnlyWorkpiecePanel.resx">
+      <DependentUpon>ReadOnlyWorkpiecePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workpiece\WorkpieceButtonPanel.resx">
+      <DependentUpon>WorkpieceButtonPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workpiece\WorkpieceSettingsMenuPanel.resx">
+      <DependentUpon>WorkpieceSettingsMenuPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workpiece\WorkpiecePanel.resx">
+      <DependentUpon>WorkpiecePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workpiece\WorkpieceSettingPanel.resx">
+      <DependentUpon>WorkpieceSettingPanel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\CustomControl\NNR.CoPackageInspector.CustomControl.View\NNR.CoPackageInspector.CustomControl.View.csproj">
       <Project>{a7cbd8e4-fcef-4ef7-94d4-436a3986aaf2}</Project>
       <Name>NNR.CoPackageInspector.CustomControl.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NNR.CoPackageInspector.RT.Framework.Model\NNR.CoPackageInspector.RT.Framework.Model.csproj">
+      <Project>{326C229A-BB48-4796-A5C2-F44EEBB0EE1C}</Project>
+      <Name>NNR.CoPackageInspector.RT.Framework.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\NNR.CoPackageInspector.RT.MainApp.Interface\NNR.CoPackageInspector.RT.MainApp.Interface.csproj">
       <Project>{18ed2796-92e0-487c-bb20-7b69e130707f}</Project>
@@ -71,6 +152,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Factory\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\kkrn_icon_modoru_mini1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\kkrn_icon_modoru_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kkrn_icon_modoru_mini.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

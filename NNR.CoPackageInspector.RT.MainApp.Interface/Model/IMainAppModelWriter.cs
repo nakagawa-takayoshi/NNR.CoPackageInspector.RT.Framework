@@ -10,6 +10,5 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface.Model
 {
     public interface IMainAppModelWriter
     {
-        IStationCollection Stations { set; }
     }
 }

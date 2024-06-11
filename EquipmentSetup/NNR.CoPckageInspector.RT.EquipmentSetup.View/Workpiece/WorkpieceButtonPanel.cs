@@ -1,31 +1,31 @@
-﻿using NNR.CoPackageInspector.RT.Framework.Model.Workpiece;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+﻿using System;
 using System.Reactive.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using NNR.CoPackageInspector.RT.Framework.Model.Workpiece;
 
-namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
+namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
 {
     /// <summary>
-    /// ワークピースボタンパネル
+    /// ワークボタンパネル
     /// </summary>
     public partial class WorkpieceButtonPanel : UserControl
     {
-        private readonly WorkpieceTypeModel _workpieceTypeModel;
+        private readonly WorkpieceTypeModel _workpieceTypeModel = null;
         private event EventHandler ButtonClick;
+        private readonly Guid _guid;
+
+        public int HeightWidthMargin => Size.Height + _buttonInner.Margin.Size.Height;
+
+        public Guid Guid => _workpieceTypeModel.Uid;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public WorkpieceButtonPanel()
         {
+            _guid = Guid.NewGuid();
             InitializeComponent();
+            _workpiecePanel.Guid.Text = _guid.ToString();
         }
 
         /// <summary>
@@ -35,9 +35,18 @@ namespace NNR.CoPakageInspector.RT.MainApp.View.UserPanels
             : this()
         {
             _workpieceTypeModel = workpieceTypeModel;
+            _guid = workpieceTypeModel.Uid;
+            _workpiecePanel.Guid.Text = workpieceTypeModel.Uid.ToString();
         }
 
+        protected override void OnLayout(LayoutEventArgs e)
+        {
+            base.OnLayout(e);
+        }
 
+        /// <summary>
+        /// ボタンクリックイベントの購読
+        /// </summary>
         public IObservable<EventArgs> ButtonClickedAsObservable()
         {
             return Observable.FromEvent<EventHandler, EventArgs>(

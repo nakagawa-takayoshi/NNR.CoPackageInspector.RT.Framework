@@ -139,39 +139,12 @@
     <value>_titleBar</value>
   </data>
   <data name="&gt;&gt;_titleBar.Type" xml:space="preserve">
-    <value>NNR.CoPakageInspector.RT.MainApp.View.TitleBar, NNR.CoPakageInspector.RT.MainApp.View, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>NNR.CoPackageInspector.CustomControl.View.TitleBar, NNR.CoPackageInspector.CustomControl.View, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;_titleBar.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;_titleBar.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="_buttonWorkSetup.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Meiryo UI, 15.75pt, style=Bold</value>
-  </data>
-  <data name="_buttonWorkSetup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>114, 109</value>
-  </data>
-  <data name="_buttonWorkSetup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 59</value>
-  </data>
-  <data name="_buttonWorkSetup.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="_buttonWorkSetup.Text" xml:space="preserve">
-    <value>ワーク設定</value>
-  </data>
-  <data name="&gt;&gt;_buttonWorkSetup.Name" xml:space="preserve">
-    <value>_buttonWorkSetup</value>
-  </data>
-  <data name="&gt;&gt;_buttonWorkSetup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;_buttonWorkSetup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;_buttonWorkSetup.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

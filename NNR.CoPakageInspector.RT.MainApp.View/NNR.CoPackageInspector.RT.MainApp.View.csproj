@@ -143,30 +143,6 @@
       <DependentUpon>TitleBar.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\TitleBarItem.cs" />
-    <Compile Include="UserPanels\ReadOnlyWorkpiecePanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserPanels\ReadOnlyWorkpiecePanel.Designer.cs">
-      <DependentUpon>ReadOnlyWorkpiecePanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserPanels\WorkpieceButtonPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserPanels\WorkpieceButtonPanel.Designer.cs">
-      <DependentUpon>WorkpieceButtonPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserPanels\WorkpiecePanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserPanels\WorkpiecePanel.Designer.cs">
-      <DependentUpon>WorkpiecePanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WorkpieceSettingPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="WorkpieceSettingPanel.Designer.cs">
-      <DependentUpon>WorkpieceSettingPanel.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AutoPilotMenuCorePanel.resx">
@@ -211,18 +187,6 @@
     <EmbeddedResource Include="TitleBar.resx">
       <DependentUpon>TitleBar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserPanels\ReadOnlyWorkpiecePanel.resx">
-      <DependentUpon>ReadOnlyWorkpiecePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserPanels\WorkpieceButtonPanel.resx">
-      <DependentUpon>WorkpieceButtonPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserPanels\WorkpiecePanel.resx">
-      <DependentUpon>WorkpiecePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WorkpieceSettingPanel.resx">
-      <DependentUpon>WorkpieceSettingPanel.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EquipmentSetup\NNR.CoPckageInspector.RT.EquipmentSetup.View\NNR.CoPckageInspector.RT.EquipmentSetup.View.csproj">
@@ -265,6 +229,7 @@
   <ItemGroup>
     <Folder Include="Controller\PanelsProvider\" />
     <Folder Include="Factory\" />
+    <Folder Include="UserPanels\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

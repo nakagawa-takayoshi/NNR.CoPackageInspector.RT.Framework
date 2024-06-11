@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace NNR.CoPackageInspector.CustomControl.View
 {
+    /// <summary>
+    /// タイトルバーのユーザーコントロール
+    /// </summary>
     public partial class TitleBar : UserControl
     {
         private bool _isReturnButton = false;
@@ -25,7 +28,21 @@ namespace NNR.CoPackageInspector.CustomControl.View
                 _isReturnButton = value;
 
                 _returnButton.Visible = value;
-            } }
+            } 
+        }
+
+        public event EventHandler ReturnButtonClicked
+        {
+            add
+            {
+                _returnButton.Click += value;
+            }
+
+            remove
+            {
+                _returnButton.Click -= value;
+            }
+        }
 
         /// <summary>
         /// コンストラクタ
@@ -35,6 +52,10 @@ namespace NNR.CoPackageInspector.CustomControl.View
             InitializeComponent();
         }
 
+        /// <summary>
+        /// フォームロード時のイベントハンドラ
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnLoad(EventArgs e)
         {
             CaptionCollection captions = new CaptionCollection();
@@ -63,6 +84,10 @@ namespace NNR.CoPackageInspector.CustomControl.View
             base.OnLoad(e);
         }
 
+        /// <summary>
+        /// サイズ変更時のイベントハンドラ
+        /// </summary>
+        /// <param name="e"></param>
         protected override void OnSizeChanged(EventArgs e)
         {
             if (!_isReturnButton) return;

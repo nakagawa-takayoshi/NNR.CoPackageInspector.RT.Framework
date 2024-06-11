@@ -69,5 +69,15 @@ namespace NNR.CoPackageInspector.CustomControl.View.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap return_mid {
+            get {
+                object obj = ResourceManager.GetObject("return_mid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

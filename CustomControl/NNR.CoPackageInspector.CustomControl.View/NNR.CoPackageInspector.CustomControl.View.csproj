@@ -91,16 +91,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\kkrn_icon_modoru_6.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\kkrn_icon_modoru_mini.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kkrn_icon_modoru_mini1.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="MenuPanels\" />
+    <None Include="Resources\return_mid.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
