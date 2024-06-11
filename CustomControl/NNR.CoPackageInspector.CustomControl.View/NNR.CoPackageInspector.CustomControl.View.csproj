@@ -96,9 +96,7 @@
   <ItemGroup>
     <None Include="Resources\kkrn_icon_modoru_mini1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MenuPanels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\return_mid.png" />
   </ItemGroup>
