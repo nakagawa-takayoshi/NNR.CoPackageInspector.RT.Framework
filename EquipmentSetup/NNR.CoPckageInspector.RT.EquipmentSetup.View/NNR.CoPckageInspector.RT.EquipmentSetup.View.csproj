@@ -89,11 +89,11 @@
     <Compile Include="Workpiece\WorkpieceButtonPanel.Designer.cs">
       <DependentUpon>WorkpieceButtonPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Workpiece\WorkpieceMenuPanel.cs">
+    <Compile Include="Workpiece\WorkpieceSettingsMenuPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Workpiece\WorkpieceMenuPanel.Designer.cs">
-      <DependentUpon>WorkpieceMenuPanel.cs</DependentUpon>
+    <Compile Include="Workpiece\WorkpieceSettingsMenuPanel.Designer.cs">
+      <DependentUpon>WorkpieceSettingsMenuPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Workpiece\WorkpiecePanel.cs">
       <SubType>UserControl</SubType>
@@ -122,8 +122,8 @@
     <EmbeddedResource Include="Workpiece\WorkpieceButtonPanel.resx">
       <DependentUpon>WorkpieceButtonPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Workpiece\WorkpieceMenuPanel.resx">
-      <DependentUpon>WorkpieceMenuPanel.cs</DependentUpon>
+    <EmbeddedResource Include="Workpiece\WorkpieceSettingsMenuPanel.resx">
+      <DependentUpon>WorkpieceSettingsMenuPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Workpiece\WorkpiecePanel.resx">
       <DependentUpon>WorkpiecePanel.cs</DependentUpon>
@@ -161,6 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\kkrn_icon_modoru_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kkrn_icon_modoru_mini.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

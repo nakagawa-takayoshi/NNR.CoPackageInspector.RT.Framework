@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EquipmentSetupPanel));
             this._titleBar = new NNR.CoPackageInspector.CustomControl.View.TitleBar();
-            this._buttonWorkSetup = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _titleBar
@@ -38,20 +37,13 @@
             this._titleBar.Captions = "Equipment Setup";
             resources.ApplyResources(this._titleBar, "_titleBar");
             this._titleBar.FontSize = 24;
+            this._titleBar.IsReturnButton = false;
             this._titleBar.Name = "_titleBar";
-            // 
-            // _buttonWorkSetup
-            // 
-            resources.ApplyResources(this._buttonWorkSetup, "_buttonWorkSetup");
-            this._buttonWorkSetup.Name = "_buttonWorkSetup";
-            this._buttonWorkSetup.UseVisualStyleBackColor = true;
-            this._buttonWorkSetup.Click += new System.EventHandler(this._buttonWorkSetup_Click);
             // 
             // EquipmentSetupPanel
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this._buttonWorkSetup);
             this.Controls.Add(this._titleBar);
             this.Name = "EquipmentSetupPanel";
             this.ResumeLayout(false);
@@ -61,6 +53,5 @@
         #endregion
 
         private NNR.CoPackageInspector.CustomControl.View.TitleBar _titleBar;
-        private System.Windows.Forms.Button _buttonWorkSetup;
     }
 }
