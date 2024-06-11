@@ -33,6 +33,9 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model.Station
             }
         }
 
+        public StationCollection()
+        {
+        }
 
         /// <summary>
         /// ステーションクラス

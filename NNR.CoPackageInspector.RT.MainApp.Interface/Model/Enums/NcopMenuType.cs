@@ -11,6 +11,7 @@ namespace NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums
         OverView,
         Main,
         AutoPilot,
-        Equipment
+        Equipment,
+        WorkpieceSettings,
     }
 }
