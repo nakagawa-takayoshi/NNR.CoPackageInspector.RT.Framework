@@ -34,6 +34,7 @@
             this._textHeight = new System.Windows.Forms.Label();
             this._textName = new System.Windows.Forms.Label();
             this._labelGuid = new System.Windows.Forms.Label();
+            this._labelGuidText = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -96,10 +97,20 @@
             this._labelGuid.TabIndex = 13;
             this._labelGuid.Text = "GUID";
             // 
+            // _labelGuidText
+            // 
+            this._labelGuidText.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this._labelGuidText.Location = new System.Drawing.Point(575, 13);
+            this._labelGuidText.Name = "_labelGuidText";
+            this._labelGuidText.Size = new System.Drawing.Size(436, 28);
+            this._labelGuidText.TabIndex = 14;
+            this._labelGuidText.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // ReadOnlyWorkpiecePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this._labelGuidText);
             this.Controls.Add(this._labelGuid);
             this.Controls.Add(this._textName);
             this.Controls.Add(this._textHeight);
@@ -119,5 +130,6 @@
         private System.Windows.Forms.Label _textHeight;
         private System.Windows.Forms.Label _textName;
         private System.Windows.Forms.Label _labelGuid;
+        private System.Windows.Forms.Label _labelGuidText;
     }
 }

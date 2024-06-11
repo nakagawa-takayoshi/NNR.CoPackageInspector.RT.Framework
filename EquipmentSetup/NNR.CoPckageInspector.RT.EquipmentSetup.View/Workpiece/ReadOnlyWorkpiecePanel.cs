@@ -6,6 +6,8 @@ namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
 {
     public partial class ReadOnlyWorkpiecePanel : UserControl
     {
+        public Label Guid => _labelGuidText;
+
         /// <summary>
         /// コンストラクタ
         /// </summary>
