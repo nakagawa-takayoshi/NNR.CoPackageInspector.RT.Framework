@@ -2,6 +2,7 @@
 using NNR.CoPackageInspector.RT.MainApp.Interface;
 using NNR.CoPackageInspector.RT.MainApp.Interface.Model.Enums;
 using NNR.CoPackageInspector.RT.MainApp.Model.Collections;
+using NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,6 +38,7 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
             menuPanelCollection.Add(NcopMenuType.Main, () => CreateMainMenuPanel(parentControl));
             menuPanelCollection.Add(NcopMenuType.AutoPilot, () => CreateAutoPilotMenuPanel(parentControl));
             menuPanelCollection.Add(NcopMenuType.Equipment, () => CreateEquipmentMenuPanel(parentControl));
+            menuPanelCollection.Add(NcopMenuType.WorkpieceSettings, () => CreateWorkpieceMenuPanel(parentControl));
 
             SuspendLayout();
 
@@ -106,6 +108,21 @@ namespace NNR.CoPakageInspector.RT.MainApp.View
                 equipmentMenuPanel.Visible = false;
                 parentControl.Controls.Remove(equipmentMenuPanel);
                 equipmentMenuPanel.Dispose();
+            });
+        }
+
+        private IDisposable CreateWorkpieceMenuPanel(Control parentControl)
+        {
+            _currentMenuPanelDisposable?.Dispose();
+
+            var workpieceSettingsMenuPanel = new WorkpieceSettingsMenuPanel();
+            workpieceSettingsMenuPanel.Visible = true;
+            parentControl.Controls.Add(workpieceSettingsMenuPanel);
+            return _currentMenuPanelDisposable = Disposable.Create(() =>
+            {
+                workpieceSettingsMenuPanel.Visible = false;
+                parentControl.Controls.Remove(workpieceSettingsMenuPanel);
+                workpieceSettingsMenuPanel.Dispose();
             });
         }
     }
