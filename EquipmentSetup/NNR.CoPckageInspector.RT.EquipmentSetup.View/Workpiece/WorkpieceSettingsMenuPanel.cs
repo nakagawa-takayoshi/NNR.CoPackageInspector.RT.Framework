@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
 {
-    public partial class WorkpieceMenuPanel : UserControl
+    public partial class WorkpieceSettingsMenuPanel : UserControl
     {
-        public WorkpieceMenuPanel()
+        public WorkpieceSettingsMenuPanel()
         {
             InitializeComponent();
         }

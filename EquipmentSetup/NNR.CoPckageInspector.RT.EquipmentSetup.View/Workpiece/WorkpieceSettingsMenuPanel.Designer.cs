@@ -1,6 +1,8 @@
-﻿namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
+﻿using NNR.CoPckageInspector.RT.EquipmentSetup.View.Properties;
+
+namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
 {
-    partial class WorkpieceMenuPanel
+    partial class WorkpieceSettingsMenuPanel
     {
         /// <summary> 
         /// 必要なデザイナー変数です。
@@ -30,6 +32,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this._titleBar = new NNR.CoPakageInspector.RT.MainApp.View.TitleBar();
+            this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -54,32 +57,41 @@
             this._titleBar.Size = new System.Drawing.Size(240, 40);
             this._titleBar.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(40, 170);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 12);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.LightCoral;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button2.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button2.Image = global::NNR.CoPckageInspector.RT.EquipmentSetup.View.Properties.Resources.kkrn_icon_modoru_mini;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageKey = "(なし)";
-            this.button2.Location = new System.Drawing.Point(45, 560);
+            this.button2.Location = new System.Drawing.Point(45, 528);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(154, 52);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "　戻る";
+            this.button2.TabIndex = 4;
+            this.button2.Text = "戻る";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // WorkpieceMenuPanel
+            // WorkpieceSettingsMenuPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this._titleBar);
             this.Controls.Add(this.button1);
-            this.Name = "WorkpieceMenuPanel";
+            this.Name = "WorkpieceSettingsMenuPanel";
             this.Size = new System.Drawing.Size(240, 641);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -87,6 +99,7 @@
 
         private System.Windows.Forms.Button button1;
         private CoPakageInspector.RT.MainApp.View.TitleBar _titleBar;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
     }
 }
