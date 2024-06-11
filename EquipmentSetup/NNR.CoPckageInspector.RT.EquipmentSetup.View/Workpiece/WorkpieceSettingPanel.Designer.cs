@@ -58,7 +58,7 @@ namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
             this._tableLayoutPanel.Name = "_tableLayoutPanel";
             this._tableLayoutPanel.RowCount = 1;
             this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this._tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this._tableLayoutPanel.Size = new System.Drawing.Size(1024, 140);
             this._tableLayoutPanel.TabIndex = 0;
             // 

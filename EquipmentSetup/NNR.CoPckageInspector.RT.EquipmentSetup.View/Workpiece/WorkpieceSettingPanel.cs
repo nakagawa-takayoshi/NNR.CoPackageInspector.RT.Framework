@@ -27,17 +27,36 @@ namespace NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece
             {
                 _tableLayoutPanel.RowStyles.RemoveAt(0);
                 _tableLayoutPanel.Height = 0;
+                AddWorkpieceButtonPanel(new WorkpieceButtonPanel());
+                AddWorkpieceButtonPanel(new WorkpieceButtonPanel());
+                //AddWorkpieceButtonPanel(new WorkpieceButtonPanel());
             }
+
+            var menuPanelProvider = MenuPanelProvider.Create();
+            menuPanelProvider.SwitchMenu(NcopMenuType.WorkpieceSettings);
 
             base.OnLoad(e);
         }
 
         public void AddWorkpieceButtonPanel(WorkpieceButtonPanel workpieceButtonPanel)
         {
+            _tableLayoutPanel.RowCount++;
             var rowStyle = new RowStyle(SizeType.AutoSize);
             _tableLayoutPanel.RowStyles.Add(rowStyle);
             _tableLayoutPanel.SetRow(workpieceButtonPanel, _tableLayoutPanel.RowCount);
-            _tableLayoutPanel.Height += workpieceButtonPanel.Height;
+            workpieceButtonPanel.Visible = true;
+            _tableLayoutPanel.Controls.Add(workpieceButtonPanel);
+            _tableLayoutPanel.Height = (workpieceButtonPanel.HeightWidthMargin * (_tableLayoutPanel.RowStyles.Count - 1));
+        }
+
+        public void RemoveWorkpieceButtonPanel(int index)
+        {
+            var control = _tableLayoutPanel.Controls[index];
+            _tableLayoutPanel.Controls.Remove(control);
+
+            _tableLayoutPanel.RowStyles.RemoveAt(index);
+
+            _tableLayoutPanel.Height = (control.Height * _tableLayoutPanel.RowStyles.Count);
         }
 
         private void titleBar1_ReturnButtonClicked(object sender, EventArgs e)
