@@ -14,6 +14,9 @@ namespace NNR.CoPackageInspector.RT.MainApp.Model.Factory
     {
         internal StationCollection StationCollection { private get; set; }
 
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
         internal MainAppModelFactory()
         {
         }
