@@ -42,7 +42,7 @@
             this._buttonInner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._buttonInner.Location = new System.Drawing.Point(0, 0);
             this._buttonInner.Name = "_buttonInner";
-            this._buttonInner.Size = new System.Drawing.Size(1042, 150);
+            this._buttonInner.Size = new System.Drawing.Size(1042, 135);
             this._buttonInner.TabIndex = 0;
             this._buttonInner.UseVisualStyleBackColor = true;
             this._buttonInner.Click += new System.EventHandler(this._buttonInner_Click);
@@ -53,7 +53,7 @@
             this._workpiecePanel.Location = new System.Drawing.Point(5, 5);
             this._workpiecePanel.Margin = new System.Windows.Forms.Padding(5);
             this._workpiecePanel.Name = "_workpiecePanel";
-            this._workpiecePanel.Size = new System.Drawing.Size(1006, 123);
+            this._workpiecePanel.Size = new System.Drawing.Size(1006, 125);
             this._workpiecePanel.TabIndex = 0;
             // 
             // WorkpieceButtonPanel
@@ -62,7 +62,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this._buttonInner);
             this.Name = "WorkpieceButtonPanel";
-            this.Size = new System.Drawing.Size(1042, 150);
+            this.Size = new System.Drawing.Size(1042, 135);
             this._buttonInner.ResumeLayout(false);
             this.ResumeLayout(false);
 
