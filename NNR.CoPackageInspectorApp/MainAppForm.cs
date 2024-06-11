@@ -8,6 +8,7 @@ using NNR.CoPackageInspector.RT.OverView.View;
 using NNR.CoPakageInspector.RT.MainApp.View;
 using NNR.CoPcakageInspector.RT.MainApp.Controller;
 using NNR.CoPckageInspector.RT.EquipmentSetup.View;
+using NNR.CoPckageInspector.RT.EquipmentSetup.View.Workpiece;
 using System;
 using System.Drawing;
 using System.Reactive.Disposables;
@@ -130,6 +131,26 @@ namespace NNR.CoPackageInspectorApp
             });
         }
 
+        /// <summary>
+        /// ワーク設定パネル
+        /// </summary>
+        private IDisposable CreateWorkpieceSettingPanel(Control parentPanel)
+        {
+            _mainPanelDisposable?.Dispose();
+
+            var panel = new WorkpieceSettingPanel();
+            parentPanel.Controls.Add(panel);
+
+            panel.Visible = true;
+
+            return Disposable.Create(() =>
+            {
+                panel.Visible = false;
+                parentPanel.Controls.Remove(panel);
+                panel.Dispose();
+            });
+        }
+
         public void CreateMainPanels(Control parentControl)
         {
             var mainAppContext = MainAppContextProvider.GetInstance();
@@ -139,6 +160,7 @@ namespace NNR.CoPackageInspectorApp
             mainPanels.Add(NcopPanelType.OverView, () => { return _mainPanelDisposable = CreateOvewViewPanel(parentControl); });
             mainPanels.Add(NcopPanelType.Equuipment, () => { return _mainPanelDisposable = CreateEquipmentPanel(parentControl); });
             mainPanels.Add(NcopPanelType.AutoPilot, () => { return _mainPanelDisposable = CreateAutoPilotPanel(parentControl); });
+            mainPanels.Add(NcopPanelType.WorkpieceSetting, () => { return _mainPanelDisposable = CreateWorkpieceSettingPanel(parentControl); });
         }
     }
 }
